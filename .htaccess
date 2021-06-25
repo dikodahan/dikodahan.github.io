@@ -1,4 +1,4 @@
-ddType video/ogg .ogv
+AddType video/ogg .ogv
 AddType video/mp4 .mp4
 AddType video/webm .webm
 AddType application/vnd.android.package-archive apk
