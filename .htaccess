@@ -63,6 +63,7 @@ suPHP_ConfigPath /opt/php55/lib
 # Use the to enable APK package support
 # ----------------------------------------------------------------------
 AddType application/vnd.android.package-archive apk
+AddHandler application/vnd.android.package-archive apk
 #
 #
 # ----------------------------------------------------------------------
