@@ -60,6 +60,12 @@ suPHP_ConfigPath /opt/php55/lib
 #
 #
 # ----------------------------------------------------------------------
+# Use the to enable APK package support
+# ----------------------------------------------------------------------
+AddType application/vnd.android.package-archive apk
+#
+#
+# ----------------------------------------------------------------------
 # Better website experience for IE users. We care of them LOL
 # ----------------------------------------------------------------------
 # Force the latest IE version, in various cases when it may fall back to IE7 mode
