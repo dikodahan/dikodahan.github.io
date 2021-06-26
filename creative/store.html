@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
 .h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,8 +50,8 @@ tr:nth-child(even) {
 </head>
 <body>
 
-<h1 style="text-align:center;" class="h1">Entertainment Streaming</h1>
-
+<button type="button" class="collapsible"><h1 style="text-align:center;" class="h1">Entertainment Streaming</h1></button>
+<div class="content">
 <table>
     <tr>
       <th style="text-align:center">App</th>
@@ -66,6 +90,7 @@ tr:nth-child(even) {
         <td style="text-align:center"><a href="https://od.lk/s/MzZfNTQ1MjcyMzRf/NovaTV1.5.0b.apk" download><img src="img/Categories/download.png" width="80"></a></td>
     </tr>
 </table>
+</div>
 
 <br><br>
 
