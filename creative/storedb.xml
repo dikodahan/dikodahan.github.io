@@ -1,47 +1,56 @@
 <?xml version = "1.0"?>
-<Entertainment>
-   <app1>
+<applications>
+   <app catogory="Entertainment">
       <name>Bee TV</name>
       <version>v2.8.5</version>
       <date>Jun-10-2021</date>
       <description>Bee TV provides a simple tile view presentation with integration to all major services along with regular updates.</description>
       <logo>img/Entertainment/beetv.jpg</logo>
       <download>https://od.lk/s/MzZfNTQ3NjE4MzZf/BeeTV2.8.5.apk</download>
-   </app1>
+   </app>
 	
-   <app2>
+   <app catogory="Entertainment">
       <name>Cuco TV</name>
       <version>v1.1.0</version>
       <date>Jun-22-2021</date>
       <description>Cuco TV provides a "one-click" style streaming app without the need to deal with choosing streaming sources.<br>Supports both Real-Debrid and Trakt.</description>
       <logo>img/Entertainment/cucotv.png</logo>
       <download>https://od.lk/s/MzZfNTUwMTA3NzRf/CucoTV1.1.0.apk</download>
-   </app2>
+   </app>
 
-   <app3>
+   <app catogory="Entertainment">
       <name>CinemaHD</name>
       <version>v2.3.7.3</version>
       <date>Jun-3-2021</date>
       <description>Cinema HD is another great alternative with a tile view interface with integration to all major services along with regular updates.</description>
       <logo>img/Entertainment/CinemaHD.png</logo>
       <download>https://od.lk/s/MzZfNTQ2Njk2MTVf/CinemaHD2.3.7.3.apk</download>
-   </app3>
+   </app>
 
-   <app4>
+   <app catogory="Entertainment">
       <name>Film Plus</name>
       <version>v1.2.9</version>
       <date>Jun-24-2021</date>
       <description>Film Plus is yet another great alternative with a tile view interface with integration to all major services along with regular updates.</description>
       <logo>img/Entertainment/filmplus.png</logo>
       <download>https://od.lk/s/MzZfNTUwNzEzMDhf/FilmPlus1.2.9.apk</download>
-   </app4>
+   </app>
 
-   <app5>
+   <app catogory="Entertainment">
       <name>Nova TV</name>
       <version>v1.5.0</version>
       <date>May-27-2021</date>
       <description>Nova TV is another great alternative with a tile view interface with integration to all major services along with regular updates.</description>
       <logo>img/Entertainment/novatv.png</logo>
       <download>https://od.lk/s/MzZfNTQ1MjcyMzRf/NovaTV1.5.0b.apk</download>
-   </app5>
-</Entertainment>
+   </app>
+
+   <app catogory="Kids">
+      <name>Happy Kids TV [Ad Free]</name>
+      <version>v5.1</version>
+      <date>Jun-14-2021</date>
+      <description>Happy Kids TV is an excellent, kids friendly streaming service with multiple age categories and a simple UI for kids to navigate in.<br><b>TV Edition</b></description>
+      <logo>img/Kids/HappyKidsTV.png</logo>
+      <download>https://od.lk/s/MzZfNTQ4MjU1Nzdf/HappyKidsTV5.1AF.apk</download>
+   </app>
+</applications>
