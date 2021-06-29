@@ -109,7 +109,7 @@ tr:nth-child(even) {
             for (i = 0; i < apps.length; i++) {
                 tableString += "<tr><td>";
                 tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-                tableString +="</td><td>";
+                tableString +="</td><td style="text-align:center">";
                 tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
                 tableString +="<br>";
                 tableString += apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
