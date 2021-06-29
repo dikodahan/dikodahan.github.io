@@ -81,8 +81,6 @@ tr:nth-child(even) {
     
 <body>
     <h1></h1>
-    <code id="container"></code>
-    <br><br>
     <div id="container"></div>
 </body>
 
@@ -111,16 +109,16 @@ tr:nth-child(even) {
             for (i = 0; i < apps.length; i++) {
                 tableString += "<tr><td>";
                 tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-                tableString +="</td><td style=&quot;text-align:center&quot;>";
+                tableString +="</td><td style='text-align:center'>";
                 tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
                 tableString +="<br>";
                 tableString += apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
                 tableString +="</td><td>";
                 tableString += apps[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                tableString +="</td><td>";
-                tableString +="<img src=&quot;";
+                tableString +="</td><td style='text-align:center'>";
+                tableString +="<img src='";
                 tableString += apps[i].getElementsByTagName("logo")[0].childNodes[0].nodeValue;
-                tableString +="&quot; width=&quot;100&quot;>";
+                tableString +="' width='100'>";
                 tableString += "</td></tr>";
             }
             tableString += "</table>";
