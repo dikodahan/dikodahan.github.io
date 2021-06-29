@@ -2,12 +2,18 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 <!-- definition of elements -->
-<xs:element name="category" type="xs:string"/>
-<xs:element name="name" type="xs:string"/>
-<xs:element name="date" type="xs:date"/>
-<xs:element name="description" type="xs:string"/>
-<xs:element name="logo" type="xs:string"/>
-<xs:element name="download" type="xs:string"/>
+<xs:element name="applications">
+  <xs:complexType>
+    <xs:sequence>
+	<xs:element name="category" type="xs:string"/>
+	<xs:element name="name" type="xs:string"/>
+	<xs:element name="date" type="xs:date"/>
+	<xs:element name="description" type="xs:string"/>
+	<xs:element name="logo" type="xs:string"/>
+	<xs:element name="download" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
 
 
 <!-- list of apps -->
