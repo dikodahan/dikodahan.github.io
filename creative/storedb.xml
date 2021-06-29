@@ -1,31 +1,10 @@
 <?xml version = "1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<!-- definition of elements -->
-<xs:element name="applications">
-  <xs:complexType>
-    <xs:sequence>
-	<xs:element name="app">
-	  <xs:complexType>
-	    <xs:sequence>
-		<xs:element name="category" type="xs:string"/>
-		<xs:element name="name" type="xs:string"/>
-		<xs:element name="date" type="xs:date"/>
-		<xs:element name="description" type="xs:string"/>
-		<xs:element name="logo" type="xs:string"/>
-		<xs:element name="download" type="xs:string"/>
-	    </xs:sequence>
-	  </xs:complexType>
-	</xs:element>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
-	
-</xs:schema>
 
 
 <!-- list of apps -->
-<applications>
+<applications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
 	
    <app>
       <category>Entertainment</category>
