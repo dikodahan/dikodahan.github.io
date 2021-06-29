@@ -1,5 +1,7 @@
-<?xml version = "1.0"?>
+<?xml version = "1.0" encoding="UTF-8"?>
+
 <applications>
+	
    <app catogory="Entertainment">
       <name>Bee TV</name>
       <version>v2.8.5</version>
@@ -53,4 +55,5 @@
       <logo>img/Kids/HappyKidsTV.png</logo>
       <download>https://od.lk/s/MzZfNTQ4MjU1Nzdf/HappyKidsTV5.1AF.apk</download>
    </app>
+	   
 </applications>
