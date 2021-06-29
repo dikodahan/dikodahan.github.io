@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<p id="app"></p>
+<p id="apps"></p>
 
 <script>
 var xhttp;
@@ -23,7 +23,7 @@ function myFunction(xml) {
     for (i = 0; i < x.length; i++) { 
         txt += x[i].childNodes[0].nodeValue + "<br>";
     }
-    document.getElementById("app").innerHTML = txt;
+    document.getElementById("apps").innerHTML = txt;
 }
 </script>
 </body>
