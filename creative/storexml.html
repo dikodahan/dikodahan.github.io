@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script>
+
+        var client;
+        if (window.XMLHttpRequest) {
+            client = new XMLHttpRequest();
+        }
+        else {
+            client = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        client.open('GET', 'storedb.xml');
+
+        client.onreadystatechange = function() { // will run when the file loads
+            // get the response XML
+            var xmlDoc = client.responseXML;
+
+            // get the list of countries
+            var apps = xmlDoc.getElementsByTagName("app");
+
+            // get the container where you want to embed the table
+            var container = document.getElementById("container");
+
+            var tableString = "<table border='1'>"; // Make a table and put the element data inside it
+            for (i = 0; i < apps.length; i++) {
+                tableString += "<tr><td>";
+                tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                tableString +="</td><td>";
+                tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
+                tableString +="</td><td>";
+                tableString += apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
+                tableString +="</td><td>";
+                tableString += apps[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                tableString +="</td><td>";
+                tableString += apps[i].getElementsByTagName("logo")[0].childNodes[0].nodeValue;
+                tableString += "</td></tr>";
+            }
+            tableString += "</table>";
+
+            // append the table to the container
+            container.innerHTML = tableString;
+        }
+
+        client.send();
+
+    </script>
+</head>
 <body>
-
-<p id="stam"></p>
-
-<script>
-var xhttp;
-xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-    }
-};
-xhttp.open("GET", "storedb.xml", true);
-xhttp.send();
-
-function myFunction(xml) {
-    var x, i, txt, xmlDoc; 
-    xmlDoc = xml.responseXML;
-    txt = "";
-    x = xmlDoc.getElementsByTagName("name");
-    for (i = 0; i < x.length; i++) { 
-        txt += x[i].childNodes[0].nodeValue + "<br>";
-    }
-    document.getElementById("stam").innerHTML = txt;
-}
-</script>
+    <h1></h1>
+    <div id="container"></div>
 </body>
 </html>
