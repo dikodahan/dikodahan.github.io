@@ -81,9 +81,7 @@ tr:nth-child(even) {
     
 <body>
   <h1></h1>
-  <div class="content">
-    <div id="container"></div>
-  </div>
+  <div id="container"></div>
 </body>
 
    <script>
@@ -107,7 +105,7 @@ tr:nth-child(even) {
             // get the container where you want to embed the table
             var container = document.getElementById("container");
 
-            var tableString = "<table border='1'>"; // Make a table and put the element data inside it
+            var tableString = "<table>"; // Make a table and put the element data inside it
             for (i = 0; i < apps.length; i++) {
                 tableString += "<tr><td>";
                 tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
