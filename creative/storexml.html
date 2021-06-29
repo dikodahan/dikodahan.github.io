@@ -5,32 +5,26 @@
 <p id="apps"></p>
 
 <script>
-var xhttp;
-xhttp = new XMLHttpRequest();
+var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        typeFunction(this)
-        cycleFunction(this);
-    } else {
+        showResult(xhttp.responseXML);
+    }
 };
 xhttp.open("GET", "storedb.xml", true);
-xhttp.send();
+xhttp.send(); 
 
-function typeFunction(xml) {
-    var xmlDoc = xml.responseXML;
-    document.getElementById("apps").innerHTML =
-    xmlDoc.documentElement.nodeName + "<br>" +
-    xmlDoc.documentElement.nodeType;
-}
-    
-function cycleFunction(xml) {
-    var x, i, txt, xmlDoc; 
-    xmlDoc = xml.responseXML;
-    txt = "";
-    x = xmlDoc.getElementsByTagName("name");
-    for (i = 0; i < x.length; i++) { 
-        txt += x[i].childNodes[0].nodeValue + "<br>";
-    }
+function showResult(xml) {
+    var txt = "";
+    path = "//app/name"
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            txt += result.childNodes[0].nodeValue + "<br>";
+            result = nodes.iterateNext();
+        } 
+    } 
     document.getElementById("apps").innerHTML = txt;
 }
 </script>
