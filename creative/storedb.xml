@@ -2,7 +2,8 @@
 
 <applications>
 	
-   <app catogory="Entertainment">
+   <app>
+      <category>Entertainment</category>
       <name>Bee TV</name>
       <version>v2.8.5</version>
       <date>Jun-10-2021</date>
@@ -11,7 +12,8 @@
       <download>https://od.lk/s/MzZfNTQ3NjE4MzZf/BeeTV2.8.5.apk</download>
    </app>
 	
-   <app catogory="Entertainment">
+   <app>
+      <category>Entertainment</category>
       <name>Cuco TV</name>
       <version>v1.1.0</version>
       <date>Jun-22-2021</date>
@@ -20,7 +22,8 @@
       <download>https://od.lk/s/MzZfNTUwMTA3NzRf/CucoTV1.1.0.apk</download>
    </app>
 
-   <app catogory="Entertainment">
+   <app>
+      <category>Entertainment</category>
       <name>CinemaHD</name>
       <version>v2.3.7.3</version>
       <date>Jun-3-2021</date>
@@ -29,7 +32,8 @@
       <download>https://od.lk/s/MzZfNTQ2Njk2MTVf/CinemaHD2.3.7.3.apk</download>
    </app>
 
-   <app catogory="Entertainment">
+   <app>
+      <category>Entertainment</category>
       <name>Film Plus</name>
       <version>v1.2.9</version>
       <date>Jun-24-2021</date>
@@ -38,7 +42,8 @@
       <download>https://od.lk/s/MzZfNTUwNzEzMDhf/FilmPlus1.2.9.apk</download>
    </app>
 
-   <app catogory="Entertainment">
+   <app>
+      <category>Entertainment</category>
       <name>Nova TV</name>
       <version>v1.5.0</version>
       <date>May-27-2021</date>
@@ -47,7 +52,8 @@
       <download>https://od.lk/s/MzZfNTQ1MjcyMzRf/NovaTV1.5.0b.apk</download>
    </app>
 
-   <app catogory="Kids">
+   <app>
+      <category>Kids</category>
       <name>Happy Kids TV [Ad Free]</name>
       <version>v5.1</version>
       <date>Jun-14-2021</date>
