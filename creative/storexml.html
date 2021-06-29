@@ -116,9 +116,9 @@ tr:nth-child(even) {
                 tableString +="</td><td>";
                 tableString += apps[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
                 tableString +="</td><td>";
-                tableString +="<img src="";
+                tableString +="<img src=&quot;";
                 tableString += apps[i].getElementsByTagName("logo")[0].childNodes[0].nodeValue;
-                tableString +="" width="100">";
+                tableString +="&quot; width=&quot;100&quot;>";
                 tableString += "</td></tr>";
             }
             tableString += "</table>";
