@@ -9,15 +9,21 @@ var xhttp;
 xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-        <p>successfully connected to xml file</p>
+        typeFunction(this)
+        cycleFunction(this);
     } else {
-        <p>problem encountered</p>
 };
 xhttp.open("GET", "storedb.xml", true);
 xhttp.send();
 
-function myFunction(xml) {
+function typeFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    document.getElementById("apps").innerHTML =
+    xmlDoc.documentElement.nodeName + "<br>" +
+    xmlDoc.documentElement.nodeType;
+}
+    
+function cycleFunction(xml) {
     var x, i, txt, xmlDoc; 
     xmlDoc = xml.responseXML;
     txt = "";
