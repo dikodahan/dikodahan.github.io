@@ -107,18 +107,22 @@ tr:nth-child(even) {
 
             var tableString = "<table>"; // Make a table and put the element data inside it
             for (i = 0; i < apps.length; i++) {
-                tableString += "<tr><td>";
-                tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-                tableString +="</td><td style='text-align:center'>";
-                tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
-                tableString +="<br>";
-                tableString += apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
-                tableString +="</td><td>";
-                tableString += apps[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                tableString +="</td><td style='text-align:center'>";
-                tableString +="<img src='";
+                tableString += "<tr><td style='text-align:center'>";
+                tableString += "<img src='";
                 tableString += apps[i].getElementsByTagName("logo")[0].childNodes[0].nodeValue;
-                tableString +="' width='100'>";
+                tableString += "' width='100'>";
+                tableString += "</td><td><u><b style='font-size:2vw'>";
+                tableString += apps[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                tableString += "<br>"
+                tableString += apps[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                tableString += "</b></v></td><td style='text-align:center'>";
+                tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
+                tableString += "<br>";
+                tableString += apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue;
+                tableString += "</td><td style='text-align:center'>";
+                tableString += "<a href='"
+                tableString += apps[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
+                tableString += "' download><img src='img/Categories/download.png' width='80'></a>"
                 tableString += "</td></tr>";
             }
             tableString += "</table>";
