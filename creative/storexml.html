@@ -119,7 +119,7 @@ tr:nth-child(even) {
                 tableString += "</td><td style='text-align:center'>";
                 tableString += apps[i].getElementsByTagName("version")[0].childNodes[0].nodeValue;
                 tableString += "<br>";
-                tableString += moment(apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue).format('MMM DD YYYY');
+                tableString += moment(apps[i].getElementsByTagName("date")[0].childNodes[0].nodeValue).format('MMM Do YY');
                 tableString += "</td><td style='text-align:center'>";
                 tableString += "<a href='"
                 tableString += apps[i].getElementsByTagName("download")[0].childNodes[0].nodeValue;
