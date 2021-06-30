@@ -107,11 +107,10 @@ tr:nth-child(even) {
             
             // create an empty initial category variable
             var category = ""
-
+            
+            
+            var tableString = "<table>";
             for (i = 0; i < apps.length; i++) {
-              if (i = 0) {
-                var tableString = "<table>";
-              }
               if (apps[i].getElementsByTagName("category")[0].childNodes[0].nodeValue === category) {
                 tableString += "<tr><td style='text-align:center'>";
                 tableString += "<img src='";
@@ -130,8 +129,8 @@ tr:nth-child(even) {
                 tableString += apps[i].getElementsByTagName("download")[0].childNodes[0].nodeValue;
                 tableString += "' download><img src='img/Categories/download.png' width='80'></a>"
                 tableString += "</td></tr>";
-                if (i = apps.length - 1) {
-                  var tableString += "</table>";
+                if (i = apps.length-1) {
+                  tableString += "</table>";
                 }
               } else {
                 if (category !== "") {
