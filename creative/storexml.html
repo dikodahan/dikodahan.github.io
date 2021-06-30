@@ -129,9 +129,6 @@ tr:nth-child(even) {
                 tableString += apps[i].getElementsByTagName("download")[0].childNodes[0].nodeValue;
                 tableString += "' download><img src='img/Categories/download.png' width='80'></a>";
                 tableString += "</td></tr>";
-                if (i = apps.length-1) {
-                  tableString += "</table>";
-                }
               } else {
                 if (category !== "") {
                   tableString += "</table>";
@@ -160,7 +157,7 @@ tr:nth-child(even) {
                 tableString += "</td></tr>";
               }
             }
-
+            tableString += "</table>";
           // append the table to the container
             container.innerHTML = tableString;
         }
