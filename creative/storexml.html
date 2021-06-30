@@ -80,7 +80,6 @@ tr:nth-child(even) {
 </head>
     
 <body>
-  <h1></h1>
   <div id="container"></div>
 </body>
 
@@ -132,8 +131,8 @@ tr:nth-child(even) {
               } else {
                 category = apps[i].getElementsByTagName("category")[0].childNodes[0].nodeValue;
                 tableString += "<h1>";
-                tableString += category;
-                tableString += "</h1>;
+                tableString += apps[i].getElementsByTagName("category")[0].childNodes[0].nodeValue;
+                tableString += "</h1>";
                 tableString += "<tr><th style='text-align:center'>App</th><th style='text-align:center'>Description</th><th style='text-align:center'>Version</th><th style='text-align:center'>Download</th></tr><tr><td style='text-align:center'>";
                 tableString += "<img src='";
                 tableString += apps[i].getElementsByTagName("logo")[0].childNodes[0].nodeValue;
