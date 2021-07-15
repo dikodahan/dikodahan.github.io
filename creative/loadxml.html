@@ -84,9 +84,7 @@ tr:nth-child(even) {
 <h2>My apps Collection within a table</h2>
 
 <button type="button" class="collapsible"><img src="img/Categories/arrowdown.png" width="80" style="float:left"><h1 style="text-align:center;" class="h1">Entertainment Streaming</h1></button>
-<div class="content">
   <p id="apps"></p>
-</div>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
@@ -125,7 +123,7 @@ function myFunction(xml) {
   tableString = "";
   var apps = xmlDoc.getElementsByTagName("app");
   for (i = 0; i< apps.length; i++) {
-    tableString += "<table>";
+    tableString += "<div class='content'><table>";
     tableString += "<tr><th style='text-align:center'>App</th><th style='text-align:center'>Description</th><th style='text-align:center'>Version</th><th style='text-align:center'>Download</th>;
     tableString += "<tr><td style='text-align:center'>";
     tableString += "<img src='";
@@ -144,7 +142,7 @@ function myFunction(xml) {
     tableString += apps[i].getElementsByTagName("download")[0].childNodes[0].nodeValue;
     tableString += "' download><img src='img/Categories/download.png' width='80'></a>";
     tableString += "</td></tr>";
-    tableString += "</table>";
+    tableString += "</table></div>";
   }
   document.getElementById("apps").innerHTML = tableString;
 }
