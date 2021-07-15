@@ -83,7 +83,7 @@ tr:nth-child(even) {
 
 <h2>My apps Collection within a table</h2>
 
-<button type="button" class="collapsible" onclick="loadXMLDoc()"><img src="img/Categories/arrowdown.png" width="80" style="float:left"><h1 style="text-align:center;" class="h1">Entertainment Streaming</h1></button>
+<button type="button" class="collapsible"><img src="img/Categories/arrowdown.png" width="80" style="float:left"><h1 style="text-align:center;" class="h1">Entertainment Streaming</h1></button>
 <div class="content">
   <p id="apps"></p>
 </div>
@@ -97,6 +97,7 @@ var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
+    loadXMLDoc();
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
