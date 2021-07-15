@@ -79,7 +79,9 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-<p id="stam"></p>
+<button type="button" onclick="loadXMLDoc()">
+Get my apps collection</button>
+  <p id="demo"></p>
   <br><br><br>
   
 <!-- Entertainment -->
@@ -785,23 +787,28 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-</script>
-<script>
-  var client;
-        if (window.XMLHttpRequest) {
-            client = new XMLHttpRequest();
-        }
-        else {
-            client = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        client.open('GET', 'storedb.xml');
+  
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      pullNames(this);
+    }
+  };
+  xmlhttp.open("GET", "storedb.xml", true);
+  xmlhttp.send();
+}
 
-  client.onreadystatechange = function() { // will run when the file loads
-            // get the response XML
-            var xmlDoc = client.responseXML;
-
-  document.getElementById("stam").innerHTML =
-  xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+function puulNames(xml) {
+  var x, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("name");
+  for (i = 0; i< x.length; i++) {
+    txt += x[i].childNodes[0].nodeValue + "<br>";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
 </script>
 
 </body>
