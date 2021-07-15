@@ -79,7 +79,9 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-
+<p id="stam"></p>
+  <br><br><br>
+  
 <!-- Entertainment -->
 <button type="button" class="collapsible"><img src="img/Categories/arrowdown.png" width="80" style="float:left"><h1 style="text-align:center;" class="h1">Entertainment Streaming</h1></button>
 <div class="content">
@@ -783,6 +785,23 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+</script>
+<script>
+  var client;
+        if (window.XMLHttpRequest) {
+            client = new XMLHttpRequest();
+        }
+        else {
+            client = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        client.open('GET', 'storedb.xml');
+
+  client.onreadystatechange = function() { // will run when the file loads
+            // get the response XML
+            var xmlDoc = client.responseXML;
+
+  document.getElementById("stam").innerHTML =
+  xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
 </script>
 
 </body>
