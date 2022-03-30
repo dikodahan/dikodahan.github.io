@@ -1,0 +1,545 @@
+<html>
+
+<head>
+    <script language="javascript">
+
+        function replace(text, username, password) {
+            return text.replaceAll(/USERNAME/g, username).replaceAll(/PASSWORD/g, password);
+        }
+        function download(filename, form) {
+            var text = document.getElementById("text").innerText;
+            console.log(text);
+            var username = form["user"].value;
+            var password = form["password"].value;
+            console.log(username, password);
+
+            text = replace(text, username, password);
+            console.log(text);
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+            return false;
+        }
+    </script>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+    <h1>m3u Replacer</h1>
+    <h2>Enter your livego.club user and password</h2>
+    <small>* the data is not saved anywhere, view source to check for yourself!</small>
+    <form onsubmit="download('DIKO+ ISRAEL.m3u', this); return false;">
+        <input type="user" name="user" id="user" placeholder="username" required>
+        <input type="password" name="password" id="password" placeholder="password" required>
+        <input type="submit" value="Download">
+        <pre readonly style="display: none;">
+            <code id="text">
+            
+#EXTM3U url-tvg="http://epg.it999.ru/epg.xml.gz"
+
+
+#EXTINF:-1 tvg-id="2673" tvg-logo="https://i.imgur.com/1lJWCuQ.png"group-title="Live: Israel",VIP IL: Kan11 FHD
+http://livego.club:8080/USERNAME/PASSWORD/18131
+
+#EXTINF:-1 tvg-id="2673" tvg-logo="https://i.imgur.com/1lJWCuQ.png" group-title="Live: Israel",VIP IL: Kan11 HD
+http://livego.club:8080/USERNAME/PASSWORD/3298
+
+#EXTINF:-1 tvg-id="2670" tvg-logo="https://i.imgur.com/p8dbYZ8.png"group-title="Live: Israel",VIP IL: Channel 12 FHD קשת
+http://livego.club:8080/USERNAME/PASSWORD/19374
+
+#EXTINF:-1 tvg-id="2670" tvg-logo="https://i.imgur.com/p8dbYZ8.png" group-title="Live: Israel",VIP IL: Channel 12 HD קשת
+http://livego.club:8080/USERNAME/PASSWORD/16272
+
+#EXTINF:-1 tvg-id="2670" tvg-logo="https://i.imgur.com/p8dbYZ8.png"group-title="Live: Israel",VIP IL: Channel 12 SD קשת
+http://livego.club:8080/USERNAME/PASSWORD/14596
+
+#EXTINF:-1 tvg-id="2671" tvg-logo="https://raw.githubusercontent.com/dikodahan/dikodahan.github.io/master/picons/reshet13.jpeg" group-title="Live: Israel",VIP IL:Channel 13 FHD רשת
+http://livego.club:8080/USERNAME/PASSWORD/19375
+
+#EXTINF:-1 tvg-id="2671" tvg-logo="https://raw.githubusercontent.com/dikodahan/dikodahan.github.io/master/picons/reshet13.jpeg" group-title="Live: Israel",VIP IL: Channel 13 HD רשת
+http://livego.club:8080/USERNAME/PASSWORD/20218
+
+#EXTINF:-1 tvg-id="2671" tvg-logo="https://raw.githubusercontent.com/dikodahan/dikodahan.github.io/master/picons/reshet13.jpeg" group-title="Live: Israel",VIP IL: Channel 13 SD רשת
+http://livego.club:8080/USERNAME/PASSWORD/3299
+
+#EXTINF:-1 tvg-id="4296" tvg-logo="https://i.imgur.com/t9nSWSV.png"group-title="Live: Israel",VIP IL: Channel 14
+http://livego.club:8080/USERNAME/PASSWORD/3301
+
+#EXTINF:-1 tvg-id="ערוץ.23.חינוכית.il" tvg-logo="https://i.ibb.co/MpMp6td/KAN-hinohit.png" group-title="Live: Israel",VIP IL: FHD חינוכית
+http://livego.club:8080/USERNAME/PASSWORD/19376
+
+#EXTINF:-1 tvg-id="ערוץ.23.חינוכית.il" tvg-logo="https://i.ibb.co/MpMp6td/KAN-hinohit.png" group-title="Live: Israel",VIP IL: HD חינוכית
+http://livego.club:8080/USERNAME/PASSWORD/40771
+
+#EXTINF:-1 tvg-id="4028" tvg-logo="https://i.ibb.co/qnsM4P4/channel24.png" group-title="Live: Israel",VIP IL: Channel 24 FHD
+http://livego.club:8080/USERNAME/PASSWORD/41254
+
+#EXTINF:-1 tvg-id="4028" tvg-logo="https://i.ibb.co/qnsM4P4/channel24.png" group-title="Live: Israel",VIP IL: Channel 24
+http://livego.club:8080/USERNAME/PASSWORD/3303
+
+#EXTINF:-1 tvg-id="4306" tvg-logo="http://epg.it999.ru/img/4306.png" group-title="Live: Israel",VIP IL: Knesset HD
+http://livego.club:8080/USERNAME/PASSWORD/14595
+
+#EXTINF:-1 tvg-ID="4306" tvg-name="VIP IL: Knesset" tvg-logo="http://epg.it999.ru/img/4306.png" group-title="Live: Israel",VIP IL: Knesset SD
+http://livego.club:8080/USERNAME/PASSWORD/12033
+
+#EXTINF:-1 tvg-ID="2716" tvg-name="VIP IL: Hidabroot Channel" tvg-logo="https://i.ibb.co/Z2MDZPK/hidabrut.png" group-title="Live: Israel",VIP IL: Hidabroot Channel
+http://livego.club:8080/USERNAME/PASSWORD/7343
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: Israel News HD" tvg-logo="https://i.ibb.co/YhsnQBp/n12-news.png" group-title="Live: Israel",VIP IL: Israel N12 News HD
+http://livego.club:8080/USERNAME/PASSWORD/41078
+
+#EXTINF:-1 tvg-id="2672" tvg-logo="https://image.ibb.co/dGvBo7/Channel9.png" group-title="Live: Israel",VIP IL: Channel 9 HD 
+http://livego.club:8080/USERNAME/PASSWORD/40334
+
+#EXTINF:-1 tvg-id="2672" tvg-logo="https://image.ibb.co/dGvBo7/Channel9.png" group-title="Live: Israel",VIP IL: Channel 9 SD
+http://livego.club:8080/USERNAME/PASSWORD/6105
+
+#EXTINF:-1 tvg-id="4011" tvg-logo="https://i.ibb.co/Y3bmhjy/Yam-Tihoni.png" group-title="Live: Israel",VIP IL: Yam Tihoni 25 ים תיכוני
+http://livego.club:8080/USERNAME/PASSWORD/12031
+
+#EXTINF:-1 tvg-id="2712" tvg-logo="https://i.ibb.co/hy0jCDJ/Makan.jpg" group-title="Live: Israel",VIP IL: Makan 33 HD
+http://livego.club:8080/USERNAME/PASSWORD/40335
+
+#EXTINF:-1 tvg-id="2712" tvg-logo="https://i.ibb.co/hy0jCDJ/Makan.jpg" group-title="Live: Israel",VIP IL: Makan 33
+http://livego.club:8080/USERNAME/PASSWORD/18132
+
+#EXTINF:-1 tvg-ID="Hala.TV.il" tvg-name="VIP IL: Hala TV FHD" tvg-logo="https://i.ibb.co/cwQk3qy/Hala.png" group-title="Live: Israel",VIP IL: Hala TV FHD
+http://livego.club:8080/USERNAME/PASSWORD/19381
+
+#EXTINF:-1 tvg-ID="2681" tvg-name="VIP IL: ONE 4K" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Live: Israel",VIP IL: ONE 4K
+http://livego.club:8080/USERNAME/PASSWORD/16514
+
+#EXTINF:-1 tvg-id="2681" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Live: Israel",VIP IL: ONE 1 FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83772
+
+#EXTINF:-1 tvg-id="2681" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Live: Israel",VIP IL: ONE 1 FHD
+http://livego.club:8080/USERNAME/PASSWORD/21903
+
+#EXTINF:-1 tvg-id="2681" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Live: Israel",VIP IL: ONE 1 HD
+http://livego.club:8080/USERNAME/PASSWORD/5956
+
+#EXTINF:-1 tvg-id="2704" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Live: Israel",VIP IL: ONE 2 FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83773
+
+#EXTINF:-1 tvg-id="2704" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Live: Israel",VIP IL: ONE 2 FHD
+http://livego.club:8080/USERNAME/PASSWORD/25827
+
+#EXTINF:-1 tvg-id="2704" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Live: Israel",VIP IL: ONE 2 HD
+http://livego.club:8080/USERNAME/PASSWORD/19104
+
+#EXTINF:-1 tvg-id="2684" tvg-logo="https://i.ibb.co/NSKhsvL/sport1.png" group-title="Live: Israel",VIP IL: YES SPORT1 FHD
+http://livego.club:8080/USERNAME/PASSWORD/20415
+
+#EXTINF:-1 tvg-id="2684" tvg-logo="https://i.ibb.co/NSKhsvL/sport1.png" group-title="Live: Israel",VIP IL: YES SPORT1 HD
+http://livego.club:8080/USERNAME/PASSWORD/5958
+
+#EXTINF:-1 tvg-ID="2683" tvg-logo="https://i.ibb.co/x7VJFPD/sport2.png" group-title="Live: Israel",VIP IL: YES SPORT2 FHD
+http://livego.club:8080/USERNAME/PASSWORD/21901
+
+#EXTINF:-1 tvg-ID="2683" tvg-logo="https://i.ibb.co/x7VJFPD/sport2.png" group-title="Live: Israel",VIP IL: YES SPORT2 HD
+http://livego.club:8080/USERNAME/PASSWORD/5957
+
+#EXTINF:-1 tvg-ID="2719" tvg-logo="https://i.ibb.co/9c24FrV/sport3.png" group-title="Live: Israel",VIP IL: YES SPORT3 FHD
+http://livego.club:8080/USERNAME/PASSWORD/21899
+
+#EXTINF:-1 tvg-ID="2719" tvg-logo="https://i.ibb.co/9c24FrV/sport3.png" group-title="Live: Israel",VIP IL: YES SPORT3 HD
+http://livego.club:8080/USERNAME/PASSWORD/11471
+
+#EXTINF:-1 tvg-ID="2720" tvg-logo="https://i.ibb.co/kXRZMvf/sport4.png" group-title="Live: Israel",VIP IL: YES SPORT4 FHD
+http://livego.club:8080/USERNAME/PASSWORD/21900
+
+#EXTINF:-1 tvg-ID="2720" tvg-logo="https://i.ibb.co/kXRZMvf/sport4.png" group-title="Live: Israel",VIP IL: YES SPORT4 HD
+http://livego.club:8080/USERNAME/PASSWORD/11472
+
+#EXTINF:-1 tvg-ID="5sport.HD.il" tvg-name="VIP IL: Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Live: Israel",VIP IL: Sport 5 FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83774
+
+#EXTINF:-1 tvg-ID="5sport.HD.il" tvg-name="VIP IL: Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Live: Israel",VIP IL: Sport 5 FHD
+http://livego.club:8080/USERNAME/PASSWORD/20416
+
+#EXTINF:-1 tvg-ID="5sport.HD.il" tvg-name="VIP IL: Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Live: Israel",VIP IL: Sport 5 HD
+http://livego.club:8080/USERNAME/PASSWORD/19813
+
+#EXTINF:-1 tvg-ID="5sport.HD.il" tvg-name="VIP IL: Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Live: Israel",VIP IL: Sport 5 SD
+http://livego.club:8080/USERNAME/PASSWORD/41502
+
+#EXTINF:-1 tvg-ID="5sport.HD.il" tvg-name="VIP IL: Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Live: Israel",VIP IL: Sport 5 SD
+http://livego.club:8080/USERNAME/PASSWORD/34679
+
+#EXTINF:-1 tvg-ID="3993" tvg-name="VIP IL: Sport 5 4K" tvg-logo="https://i.ibb.co/gJk555m/5-sport-4k.png" group-title="Live: Israel",VIP IL: Sport 5 Live 4K
+http://livego.club:8080/USERNAME/PASSWORD/50637
+
+#EXTINF:-1 tvg-ID="3993" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Live: Israel",VIP IL: Sport 5 Live FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83775
+
+#EXTINF:-1 tvg-ID="3993" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Live: Israel",VIP IL: Sport 5 Live FHD 
+http://livego.club:8080/USERNAME/PASSWORD/25825
+
+#EXTINF:-1 tvg-ID="3993" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Live: Israel",VIP IL: Sport 5 Live HD
+http://livego.club:8080/USERNAME/PASSWORD/16521
+
+#EXTINF:-1 tvg-ID="2682" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Live: Israel",VIP IL: Sport 5 Live FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83776
+
+#EXTINF:-1 tvg-ID="2682" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Live: Israel",VIP IL: Sport Stars HD ספורט 5 סטארס
+http://livego.club:8080/USERNAME/PASSWORD/5955
+
+#EXTINF:-1 tvg-ID="2682" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Live: Israel",VIP IL: Sport Stars HD ספורט 5 סטארס
+http://livego.club:8080USERNAME/PASSWORD/25826
+
+#EXTINF:-1 tvg-ID="4312" tvg-logo="https://i.ibb.co/LhTj6FJ/5-Plus.png" group-title="Live: Israel",VIP IL:Sport 5 Plus HD +ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/12823
+
+#EXTINF:-1 tvg-ID="4312" tvg-logo="https://i.ibb.co/LhTj6FJ/5-Plus.png" group-title="Live: Israel",VIP IL: Sport 5 Plus SD
+http://livego.club:8080/USERNAME/PASSWORD/22315
+
+#EXTINF:-1 tvg-ID="3992" tvg-logo="https://i.ibb.co/bQK9gj5/5-Gold.png" group-title="Live: Israel",VIP IL: Sport 5 Gold ספורט 5 גולד
+http://livego.club:8080/USERNAME/PASSWORD/11725
+
+#EXTINF:-1 tvg-ID="Fox.Sports.1.HDTV.(FS1HD).us" tvg-name="VIP IL: Fox Sport HD" tvg-logo="https://i.ibb.co/ZdyXXy0/FOX-Sports-1.png" group-title="Live: Israel",VIP IL: Fox Sport HD
+http://livego.club:8080/USERNAME/PASSWORD/3341
+
+#EXTINF:-1 tvg-ID="EUROSPORT.il" tvg-name="VIP IL: Eurosport 1 HD" tvg-logo="https://i.ibb.co/28XrvzK/eurosport1.png" group-title="Live: Israel",VIP IL: Eurosport 1 HD
+http://livego.club:8080/USERNAME/PASSWORD/19377
+
+#EXTINF:-1 tvg-ID="EUROSPORT.2.il" tvg-name="VIP IL: Eurosport 2 HD" tvg-logo="https://i.ibb.co/gzjp9vN/eurosport2.png" group-title="Live: Israel",VIP IL: Eurosport 2 HD
+http://livego.club:8080/USERNAME/PASSWORD/19379
+
+#EXTINF:-1 tvg-ID="TRACE.ספורט.il" tvg-name="VIP IL: Trace Spôrt Stars" tvg-logo="https://i.ibb.co/196tzt2/TraceSS.png" group-title="Live: Israel",VIP IL: Trace Spôrt Stars
+http://livego.club:8080/USERNAME/PASSWORD/63091
+
+#EXTINF:-1 tvg-ID="אגו.טוטאל.il" tvg-name="VIP IL: Ego Total" tvg-logo="https://i.ibb.co/rZgccz1/EGO.png" group-title="Live: Israel",VIP IL: Ego Total
+http://livego.club:8080/USERNAME/PASSWORD/12586
+
+#EXTINF:-1 tvg-id="5015" tvg-logo="https://i.ibb.co/b3D29W7/extreme-sports.jpg" group-title="Live: Israel",VIP IL: Extreme Sports אקסטרים ex
+http://livego.club:8080/USERNAME/PASSWORD/19514
+
+#EXTINF:-1 tvg-ID="3999" tvg-logo="http://epg.it999.ru/img/3999.png" group-title="Live: Israel",VIP IL: YES TV Action FHD
+http://livego.club:8080/USERNAME/PASSWORD/45723
+
+#EXTINF:-1 tvg-ID="3999" tvg-logo="http://epg.it999.ru/img/3999.png" group-title="Live: Israel",VIP IL: YES TV Action HD [Multi-Sub]" 
+http://livego.club:8080/USERNAME/PASSWORD/16517
+
+#EXTINF:-1 tvg-ID="3999" tvg-logo="http://epg.it999.ru/img/3999.png" group-title="Live: Israel",VIP IL: YES TV Action HD
+http://livego.club:8080/USERNAME/PASSWORD/25833
+
+#EXTINF:-1 tvg-ID="4021" tvg-logo="http://epg.it999.ru/img/4021.png" group-title="Live: Israel",VIP IL: YES TV Comedy FHD
+http://livego.club:8080/USERNAME/PASSWORD/45725
+
+#EXTINF:-1 tvg-ID="4021" tvg-logo="http://epg.it999.ru/img/4021.png" group-title="Live: Israel",VIP IL: YES TV Comedy HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16518
+
+#EXTINF:-1 tvg-ID="4021" tvg-logo="http://epg.it999.ru/img/4021.png"  group-title="Live: Israel",VIP IL: YES TV Comedy HD
+http://livego.club:8080/USERNAME/PASSWORD/25837
+
+#EXTINF:-1 tvg-ID="4007" tvg-logo="http://epg.it999.ru/img/4007.png" group-title="Live: Israel",VIP IL: YES TV Drama FHD
+http://livego.club:8080/USERNAME/PASSWORD/45722
+
+#EXTINF:-1 tvg-ID="4007" tvg-logo="http://epg.it999.ru/img/4007.png" group-title="Live: Israel",VIP IL: YES TV Drama HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16520
+
+#EXTINF:-1 tvg-ID="4007" tvg-logo="http://epg.it999.ru/img/4007.png" group-title="Live: Israel",VIP IL: YES TV Drama HD
+http://livego.club:8080/USERNAME/PASSWORD/25835
+
+#EXTINF:-1 tvg-ID="4007" tvg-logo="http://epg.it999.ru/img/4007.png" group-title="Live: Israel",VIP IL: YES TV Drama HD
+http://livego.club:8080/USERNAME/PASSWORD/25824
+
+#EXTINF:-1 tvg-ID="2966" tvg-logo="http://epg.it999.ru/img/2966.png" group-title="Live: Israel",VIP IL: YES Movies Action FHD
+http://livego.club:8080/USERNAME/PASSWORD/45721
+
+#EXTINF:-1 tvg-ID="2966" tvg-logo="http://epg.it999.ru/img/2966.png" group-title="Live: Israel",VIP IL: YES Movies Action HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16513
+
+#EXTINF:-1 tvg-ID="2966" tvg-logo="http://epg.it999.ru/img/2966.png" group-title="Live: Israel",VIP IL: YES Movies Action HD
+http://livego.club:8080/USERNAME/PASSWORD/25829
+
+#EXTINF:-1 tvg-ID="2967" tvg-logo="http://epg.it999.ru/img/2967.png" group-title="Live: Israel",VIP IL: YES Movies Kids FHD
+http://livego.club:8080/USERNAME/PASSWORD/45718
+
+#EXTINF:-1 tvg-ID="2967" tvg-logo="http://epg.it999.ru/img/2967.png" group-title="Live: Israel",VIP IL: YES Movies Kids HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/60460
+
+#EXTINF:-1 tvg-ID="2965" tvg-logo="http://epg.it999.ru/img/2965.png" group-title="Live: Israel",VIP IL: YES Movies Drama FHD
+http://livego.club:8080/USERNAME/PASSWORD/45719
+
+#EXTINF:-1 tvg-ID="2965" tvg-logo="http://epg.it999.ru/img/2965.png" group-title="Live: Israel",VIP IL: YES Movies Drama HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16512
+
+#EXTINF:-1 tvg-ID="2965" tvg-logo="http://epg.it999.ru/img/2965.png" group-title="Live: Israel",VIP IL: YES Movies Drama HD
+http://livego.club:8080/USERNAME/PASSWORD/25828
+
+#EXTINF:-1 tvg-ID="2968" tvg-logo="http://epg.it999.ru/img/2968.png" group-title="Live: Israel",VIP IL: YES Movies Comedy FHD
+http://livego.club:8080/USERNAME/PASSWORD/45720
+
+#EXTINF:-1 tvg-ID="2968" tvg-logo="http://epg.it999.ru/img/2968.png" group-title="Live: Israel",VIP IL: YES Movies Comedy HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16515
+
+#EXTINF:-1 tvg-ID="2968" tvg-logo="http://epg.it999.ru/img/2968.png" group-title="Live: Israel",VIP IL: YES Movies Comedy HD
+http://livego.club:8080/USERNAME/PASSWORD/25831
+
+#EXTINF:-1 tvg-ID="2974" tvg-name="VIP IL: YES Cinema HD [Multi-Sub]" tvg-logo="http://epg.it999.ru/img/2974.png" group-title="Live: Israel",VIP IL: YES Cinema Israeli HD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/26119
+
+#EXTINF:-1 tvg-ID="2974" tvg-name="VIP IL: YES Cinema HD"http://epg.it999.ru/img/2974.png" group-title="Live: Israel",VIP IL: YES Cinema Israeli HD
+http://livego.club:8080/USERNAME/PASSWORD/17205
+
+#EXTINF:-1 tvg-ID="2972" tvg-logo="http://epg.it999.ru/img/2972.png" group-title="Live: Israel",VIP IL: YES Docu FHD [Multi-Sub]
+http://livego.club:8080/USERNAME/PASSWORD/16519
+
+#EXTINF:-1 tvg-ID="2972" tvg-logo="http://epg.it999.ru/img/2972.png" group-title="Live: Israel",VIP IL: YES Docu FHD
+http://livego.club:8080/USERNAME/PASSWORD/25834
+
+#EXTINF:-1 tvg-ID="2972" tvg-logo="http://epg.it999.ru/img/2972.png" group-title="Live: Israel",VIP IL: YES Docu FHD
+http://livego.club:8080/USERNAME/PASSWORD/25832
+
+#EXTINF:-1 tvg-ID="5030" tvg-name="VIP IL: The Humor Channel" tvg-logo="http://epg.it999.ru/img/5030.png" group-title="Live: Israel",VIP IL:The Humor Channel
+http://livego.club:8080/USERNAME/PASSWORD/19380
+
+#EXTINF:-1 tvg-id="2698" tvg-logo="http://epg.it999.ru/img/2698.png" group-title="Live: Israel",VIP IL: HOT 3 HD
+http://livego.club:8080USERNAME/PASSWORD/6106
+
+#EXTINF:-1 tvg-id="5023" tvg-logo="http://epg.it999.ru/img/5023.png" group-title="Live: Israel",VIP IL: HOT 8 HD
+http://livego.club:8080/USERNAME/PASSWORD/8141
+
+#EXTINF:-1 tvg-ID="2691" tvg-name="HOT ZONE HD" tvg-logo="http://epg.it999.ru/img/2691.png" group-title="Live: Israel",VIP IL: HOT ZONE HD
+http://livego.club:8080/USERNAME/PASSWORD/6107
+
+#EXTINF:-1 tvg-ID="5024" tvg-name="VIP IL: HOT Comedy Central HD" tvg-logo="http://epg.it999.ru/img/5024.png" group-title="Live: Israel",VIP IL: HOT Comedy Central HD
+http://livego.club:8080/USERNAME/PASSWORD/6104
+
+#EXTINF:-1 tvg-ID="2710" tvg-name="VIP IL: HOT Bidur" tvg-logo="http://epg.it999.ru/img/2710.png" group-title="Live: Israel",VIP IL: HOT Bidur
+http://livego.club:8080/USERNAME/PASSWORD/6102
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: HOT Senior" tvg-logo="https://i.ibb.co/B27h9wV/hot.png" group-title="Live: Israel",VIP IL: HOT Senior
+http://livego.club:8080/USERNAME/PASSWORD/41501
+
+#EXTINF:-1 tvg-id="2688" tvg-logo="http://epg.it999.ru/img/2688.png" group-title="Live: Israel",VIP IL: HOT Cinema 1
+http://livego.club:8080/USERNAME/PASSWORD/23802
+
+#EXTINF:-1 tvg-id="2688" tvg-logo="http://epg.it999.ru/img/2688.png" group-title="Live: Israel",VIP IL: HOT Cinema 1 HD
+http://livego.club:8080/USERNAME/PASSWORD/6108
+
+#EXTINF:-1 tvg-ID="2688" tvg-name="VIP IL: HOT Cinema 1 FHD" tvg-logo="http://epg.it999.ru/img/2688.png" group-title="Live: Israel",VIP IL: HOT Cinema 1 FHD
+http://livego.club:8080/USERNAME/PASSWORD/64397
+
+#EXTINF:-1 tvg-ID="2702" tvg-name="VIP IL: HOT Cinema 2" tvg-logo="http://epg.it999.ru/img/2702.png" group-title="Live: Israel",VIP IL: HOT Cinema 2
+http://livego.club:8080/USERNAME/PASSWORD/25821
+
+#EXTINF:-1 tvg-ID="2702" tvg-name="VIP IL: HOT Cinema 2 HD" tvg-logo="http://epg.it999.ru/img/2702.png" group-title="Live: Israel", HOT Cinema 2 HD
+http://livego.club:8080/USERNAME/PASSWORD/5960
+
+#EXTINF:-1 tvg-ID="2702" tvg-name="VIP IL: HOT Cinema 2 FHD" tvg-logo="http://epg.it999.ru/img/2702.png" group-title="Live: Israel",VIP IL: HOT Cinema 2 FHD
+http://livego.club:8080/USERNAME/PASSWORD/64338
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="VIP IL: HOT Cinema 3" tvg-logo="http://epg.it999.ru/img/2703.png" group-title="Live: Israel",VIP IL: HOT Cinema 3
+http://livego.club:8080/USERNAME/PASSWORD/25822
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="VIP IL: HOT Cinema 3 HD" tvg-logo="http://epg.it999.ru/img/2703.png" group-title="Live: Israel",VIP IL: HOT Cinema 3 HD
+http://livego.club:8080/USERNAME/PASSWORD/5961
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="VIP IL: HOT Cinema 3 FHD" tvg-logo="http://epg.it999.ru/img/2703.png"group-title="Live: Israel",VIP IL: HOT Cinema 3 FHD
+http://livego.club:8080/USERNAME/PASSWORD/64339
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="VIP IL: HOT Cinema 4" tvg-logo="http://epg.it999.ru/img/2687.png" group-title="Live: Israel",VIP IL:HOT Cinema 4
+http://livego.club:8080/USERNAME/PASSWORD/25823
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="VIP IL: HOT Cinema 4 HD" tvg-logo="http://epg.it999.ru/img/2687.png" group-title="Live: Israel",VIP IL: HOT Cinema 4 HD
+http://livego.club:8080/USERNAME/PASSWORD/6109
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="VIP IL: HOT Cinema 4 FHD" tvg-logo="http://epg.it999.ru/img/2687.png" group-title="Live: Israel",VIP IL: HOT Cinema 4 FHD
+http://livego.club:8080/USERNAME/PASSWORD/64340
+
+#EXTINF:-1 tvg-ID="2685" tvg-name="VIP IL: HOT HBO FHD" tvg-logo="http://epg.it999.ru/img/2685.png" group-title="Live: Israel",VIP IL: HOT HBO FHD
+http://livego.club:8080/USERNAME/PASSWORD/41504
+
+#EXTINF:-1 tvg-ID="2685" tvg-name="VIP IL: HOT HBO HD" tvg-logo="http://epg.it999.ru/img/2685.png" group-title="Live: Israel",VIP IL: HOT HBO HD
+http://livego.club:8080/USERNAME/PASSWORD/6110
+
+#EXTINF:-1 tvg-ID="Zoom.il" tvg-name="VIP IL: Zoom" tvg-logo="https://image.ibb.co/fsrj87/zOOM.png" group-title="Live: Israel",VIP IL: Zoom
+http://livego.club:8080/USERNAME/PASSWORD/8146
+
+#EXTINF:-1 tvg-ID="הופ!.il" tvg-name="VIP IL: HOP" tvg-logo="https://image.ibb.co/cSYsvn/HOPIL.png" group-title="Live: Israel",VIP IL: HOP
+http://livego.club:8080/USERNAME/PASSWORD/16062
+
+#EXTINF:-1 tvg-ID="2714" tvg-name="VIP IL: HOP YALDUT" tvg-logo="https://i.ibb.co/2SrXnj9/hop-yaldot.png", group-title="Live: Israel",VIP IL: HOP YALDUT
+http://livego.club:8080/USERNAME/PASSWORD/6114
+
+#EXTINF:-1 tvg-ID="4307" tvg-name="VIP IL: Disney HD" tvg-logo="https://i.ibb.co/4jsBv7k/disney.png" group-title="Live: Israel",VIP IL: Disney HD
+http://livego.club:8080/USERNAME/PASSWORD/9574
+
+#EXTINF:-1 tvg-ID="2674" tvg-name="VIP IL: Disney Jr" tvg-logo="https://i.ibb.co/XsD3ymp/Disney-Junior.png" group-title="Live: Israel",VIP IL: Disney Jr
+http://livego.club:8080/USERNAME/PASSWORD/9575
+
+#EXTINF:-1 tvg-ID="4009" tvg-name="VIP IL: Nickelodeon" tvg-logo="https://i.ibb.co/VBXfKwQ/Nick.png" group-title="Live: Israel",VIP IL: Nickelodeon
+http://livego.club:8080/USERNAME/PASSWORD/19515
+
+#EXTINF:-1 tvg-ID="2678" tvg-name="VIP IL: Nick Jr" tvg-logo="https://i.ibb.co/1MfVYWd/nick-jr.png" group-title="Live: Israel",VIP IL: Nick Jr
+http://livego.club:8080/USERNAME/PASSWORD/6113
+
+#EXTINF:-1 tvg-ID="2675" tvg-name="VIP IL: NickTeen" tvg-logo="https://i.ibb.co/s1drdq5/TeenNick.png" group-title="Live: Israel",VIP IL: NickTeen
+http://livego.club:8080/USERNAME/PASSWORD/6112
+
+#EXTINF:-1 tvg-ID="2701" tvg-name="VIP IL: Baby TV" tvg-logo="https://image.ibb.co/dsvNvn/BabyTV.png" group-title="Live: Israel",VIP IL: Baby TV
+http://livego.club:8080/USERNAME/PASSWORD/6111
+
+#EXTINF:-1 tvg-ID="5087" tvg-name="VIP IL: Yes Wiz" tvg-logo="https://i.imgur.com/LkVTjls.png" group-title="Live: Israel",VIP IL: Yes Wiz
+http://livego.club:8080USERNAME/PASSWORD/12035
+
+#EXTINF:-1 tvg-ID="2695" tvg-name="VIP IL: Luli" tvg-logo="http://epg.it999.ru/img/2695.png" group-title="Live: Israel",Luli
+http://livego.club:8080/USERNAME/PASSWORD/12034
+
+#EXTINF:-1 tvg-ID="Jim.Jam.il" tvg-name="VIP IL: JimJam" tvg-logo="https://i.ibb.co/WyM00x5/jimjam.png" group-title="Live: Israel",VIP IL: JimJam
+http://livego.club:8080/USERNAME/PASSWORD/19512
+
+#EXTINF:-1 tvg-ID="2697" tvg-name="VIP IL: Junior" tvg-logo="https://i.ibb.co/sbRYqXS/junior.png" group-title="Live: Israel",VIP IL: Junior
+http://livego.club:8080/USERNAME/PASSWORD/8143
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: Hero!" tvg-logo="https://i.imgur.com/vunLEXI.png" group-title="Live: Israel",VIP IL: Hero!
+http://livego.club:8080/USERNAME/PASSWORD/63093
+
+#EXTINF:-1 tvg-ID="2717" tvg-name="VIP IL: i 24" tvg-logo="http://image.ibb.co/eZDefn/i24.png" group-title="Live: Israel",VIP IL: i 24
+http://livego.club:8080/USERNAME/PASSWORD/12299
+
+#EXTINF:-1 tvg-ID="Fox.Business.Network.HDTV.(FBNHD).us" tvg-name="VIP IL: Fox Business HD" tvg-logo="https://i.ibb.co/Hr2DxRR/fox-business.png" group-title="Live: Israel",VIP IL: Fox Business HD
+http://livego.club:8080/USERNAME/PASSWORD/42009
+
+#EXTINF:-1 tvg-ID="4023" tvg-name="VIP IL: MTV Isreal" tvg-logo="https://i.ibb.co/XS8ZGvq/mtv-music.png" group-title="Live: Israel",VIP IL: MTV Isreal
+http://livego.club:8080/USERNAME/PASSWORD/9573
+
+#EXTINF:-1 tvg-ID="1723" tvg-name="VIP IL: MTV Hits" tvg-logo="https://i.ibb.co/1vgNg5x/MTV-Hits-2017-logo-svg.png" group-title="Live: Israel",VIP IL: MTV Hits
+http://livego.club:8080/USERNAME/PASSWORD/42010
+
+#EXTINF:-1 tvg-ID="VH1.(VH1.HD).co" tvg-name="VIP IL: MTV 00s" tvg-logo="https://i.ibb.co/DDBcQSH/MTV-00s.png" group-title="Live: Israel",VIP IL: MTV 00s
+http://livego.club:8080/USERNAME/PASSWORD/42007
+
+#EXTINF:-1 tvg-ID="VH1.HDTV.(East).(VH1HD).us" tvg-name="VIP IL: VH1" tvg-logo="http://epg.it999.ru/img/491.png" group-title="Live: Israel",VIP IL: VH1 HD
+http://livego.club:8080/USERNAME/PASSWORD/42008
+
+#EXTINF:-1 tvg-ID="CLASSICA.il" tvg-name="VIP IL: Classic FHD" tvg-logo="https://i.ibb.co/8YCCCnR/stingray-classica.jpg" group-title="Live: Israel",VIP IL: Classic FHD
+http://livego.club:8080/USERNAME/PASSWORD/58502
+
+#EXTINF:-1 tvg-ID="Animal.Planet.il" tvg-name="VIP IL: Animal planet" tvg-logo="http://epg.it999.ru/img/365.png" group-title="Live: Israel",VIP IL: Animal planet
+http://livego.club:8080/USERNAME/PASSWORD/35323
+
+#EXTINF:-1 tvg-ID="2677" tvg-name="VIP IL: National Geographic HD" tvg-logo="https://i.ibb.co/NVMTTZn/NG.png" group-title="Live: Israel",VIP IL: National Geographic HD
+http://livego.club:8080/USERNAME/PASSWORD/40774
+
+#EXTINF:-1 tvg-ID="2677" tvg-name="VIP IL: National Geographic" tvg-logo="https://i.ibb.co/NVMTTZn/NG.png" group-title="Live: Israel",VIP IL: National Geographic
+http://livego.club:8080/USERNAME/PASSWORD/9571
+
+#EXTINF:-1 tvg-ID="4311" tvg-name="VIP IL: National Geo Wild HD" tvg-logo="https://i.ibb.co/h95yBG2/Nat-Geo-Wild.png" group-title="Live: Israel",VIP IL: National Geo Wild HD
+http://livego.club:8080/USERNAME/PASSWORD/40775
+
+#EXTINF:-1 tvg-ID="4311" tvg-name="VIP IL: National Geo Wild" tvg-logo="https://i.ibb.co/h95yBG2/Nat-Geo-Wild.png" group-title="Live: Israel",VIP IL: National Geo Wild
+http://livego.club:8080/USERNAME/PASSWORD/7344
+
+#EXTINF:-1 tvg-ID="2689" tvg-name="VIP IL: Discovery HD" tvg-logo="https://preview.ibb.co/k0UnT7/discoveryhd.png" group-title="Live: Israel",VIP IL: Discovery HD
+http://livego.club:8080/USERNAME/PASSWORD/7342
+
+#EXTINF:-1 tvg-ID="Discovery.Science.il" tvg-name="VIP IL: Discovery Science" tvg-logo="http://epg.it999.ru/img/3918.png" group-title="Live: Israel",VIP IL: Discovery Science
+http://livego.club:8080/USERNAME/PASSWORD/41253
+
+#EXTINF:-1 tvg-ID="היסטוריה.HD.il" tvg-name="VIP IL: History HD" tvg-logo="https://i.ibb.co/zbsGQQm/history.png" group-title="Live: Israel",VIP IL: History HD
+http://livego.club:8080/USERNAME/PASSWORD/8142
+
+#EXTINF:-1 tvg-ID="היסטוריה.HD.il" tvg-name="VIP IL: History" tvg-logo="https://i.ibb.co/zbsGQQm/history.png" group-title="Live: Israel",VIP IL: History
+http://livego.club:8080/0USERNAME/PASSWORD/22644
+
+#EXTINF:-1 tvg-ID="האח.הגדול.il" tvg-name="VIP IL: Big Brother 26" tvg-logo="http://epg.it999.ru/img/4314.png" group-title="Live: Israel",VIP IL: Big Brother 26
+http://livego.club:8080/USERNAME/PASSWORD/17205
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: ID" tvg-logo="https://i.ibb.co/kmThcy3/ID.png" group-title="Live: Israel",VIP IL: ID
+http://livego.club:8080/USERNAME/PASSWORD/63092
+
+#EXTINF:-1 tvg-ID="2337" tvg-name="VIP IL: Me TV" tvg-logo="https://i.ibb.co/HBpLZ99/metv.png" group-title="Live: Israel",VIP IL: Middle-east TV
+http://livego.club:8080/USERNAME/PASSWORD/23122
+
+#EXTINF:-1 tvg-ID="ערוץ.האוכל.il" tvg-name="VIP IL: Food Channel" tvg-logo="https://i.ibb.co/vJCtswF/Food-Channel.png" group-title="Live: Israel",VIP IL: Food Channel
+http://livego.club:8080/USERNAME/PASSWORD/7341
+
+#EXTINF:-1 tvg-ID="2708" tvg-name="VIP IL: Food Network HD" tvg-logo="https://i.ibb.co/jTZj08R/Food-Network.png" group-title="Live: Israel",VIP IL: Food Network HD
+http://livego.club:8080/USERNAME/PASSWORD/22645
+
+#EXTINF:-1 tvg-ID="2709" tvg-name="VIP IL: Health Channel" tvg-logo="http://epg.it999.ru/img/2709.png" group-title="Live: Israel",VIP IL: Health Channel
+http://livego.club:8080/USERNAME/PASSWORD/12032
+
+#EXTINF:-1 tvg-ID="FTV.il" tvg-name="VIP IL: Fashion Isreal HD" tvg-logo="http://epg.it999.ru/img/3793.png" group-title="Live: Israel",VIP IL: Fashion Isreal HD
+http://livego.club:8080/USERNAME/PASSWORD/41252
+
+#EXTINF:-1 tvg-ID="TLC.il" tvg-name="VIP IL: TLC" tvg-logo="http://epg.it999.ru/img/3666.png" group-title="Live: Israel",VIP IL: TLC
+http://livego.club:8080/USERNAME/PASSWORD/35322
+
+#EXTINF:-1 tvg-ID="4005" tvg-name="VIP IL: E! Entertainment" tvg-logo="http://image.ibb.co/e0GbRS/entertainment.png" group-title="Live: Israel",VIP IL: E! Entertainment
+http://livego.club:8080/USERNAME/PASSWORD/14639
+
+#EXTINF:-1 tvg-ID="CBS.reality.il" tvg-name="VIP IL: CBS Reality" tvg-logo="https://i.ibb.co/DMhf1X9/CBS-Reality.png" group-title="Live: Israel",VIP IL: CBS Reality
+http://livego.club:8080/USERNAME/PASSWORD/14723
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: BBC entertainement" tvg-logo="https://i.ibb.co/WPJ71x7/bbc-entertainment.jpg" group-title="Live: Israel",VIP IL: BBC entertainement
+http://livego.club:8080USERNAME/PASSWORD/41503
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: Design Channel FHD" tvg-logo="https://i.ibb.co/MskZ8Sn/design-channel.jpg" group-title="Live: Israel",VIP IL: Design Channel FHD
+http://livego.club:8080USERNAME/PASSWORD/23716
+
+#EXTINF:-1 tvg-ID="2680" tvg-name="VIP IL: Home Plus" tvg-logo="https://image.ibb.co/jGjbMS/HomePlus.png" group-title="Live: Israel",VIP IL: Home Plus
+http://livego.club:8080/USERNAME/PASSWORD/6103
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: Fine Living" tvg-logo="https://image.ibb.co/mjJxT7/fineliving.png" group-title="Live: Israel",VIP IL: Fine Living
+http://livego.club:8080/USERNAME/PASSWORD/12029
+
+#EXTINF:-1 tvg-ID="2686" tvg-name="VIP IL: GoodLife" tvg-logo="https://i.ibb.co/chg2mhq/good-life.png" group-title="Live: Israel",VIP IL: GoodLife
+http://livego.club:8080/USERNAME/PASSWORD/16283
+
+#EXTINF:-1 tvg-ID="4029" tvg-name="VIP IL: Lifetime" tvg-logo="https://image.ibb.co/fgBO1S/Lifetime.png" group-title="Live: Israel",VIP IL: Lifetime
+http://livego.club:8080/USERNAME/PASSWORD/12030
+
+#EXTINF:-1 tvg-ID="2692" tvg-name="VIP IL: Travel Channel" tvg-logo="https://image.ibb.co/iPQu87/Travel_Channel.png" group-title="Live: Israel",VIP IL: Travel Channel
+http://livego.club:8080/USERNAME/PASSWORD/7340
+
+#EXTINF:-1 tvg-ID="ערוץ.הקניות.il" tvg-name="VIP IL: Israel Shopping Channel" tvg-logo="https://i.ibb.co/pXpQNsm/Shopping-Channel.png" group-title="Live: Israel",VIP IL: Israel Shopping Channel
+http://livego.club:8080/USERNAME/PASSWORD/19513
+
+#EXTINF:-1 tvg-ID="2718" tvg-name="VIP IL: VIVA" tvg-logo="https://i.ibb.co/9nr0S6k/Viva.png" group-title="Live: Israel",VIP IL: VIVA
+http://livego.club:8080/USERNAME/PASSWORD/14531
+
+#EXTINF:-1 tvg-ID="2713" tvg-name="VIP IL: VIVA Plus" tvg-logo="https://i.ibb.co/B6tX7Gn/VivaPlus.png" group-title="Live: Israel",VIP IL: VIVA Plus
+http://livego.club:8080USERNAME/PASSWORD/6101
+
+#EXTINF:-1 tvg-ID="4030" tvg-name="VIP IL: Turkish Dramas Plus FHD" tvg-logo="http://epg.it999.ru/img/4030.png" group-title="Live: Israel",VIP IL: Turkish Dramas Plus FHD
+http://livego.club:8080/USERNAME/PASSWORD/34819
+
+#EXTINF:-1 tvg-ID="ערוץ.הדרמות.הטורקיות.2.il" tvg-name="VIP IL: Turkish Dramas 2" tvg-logo="https://i.imgur.com/zHj1579.png" group-title="Live: Israel",VIP IL: Turkish Dramas 2
+http://livego.club:8080/USERNAME/PASSWORD/45726
+
+#EXTINF:-1 tvg-ID="" tvg-name="VIP IL: YES Bollywood SD" tvg-logo="https://i.ibb.co/9ym9pZC/yes-Bollywoo-D.png" group-title="Live: Israel",VIP IL: YES Bollywood SD
+http://livego.club:8080/USERNAME/PASSWORD/20368
+
+#EXTINF:-1 tvg-ID="BollyShow.il" tvg-name="VIP IL: YES Bollyshow SD" tvg-logo="https://i.ibb.co/19x7697/yes-bollyshow.png" group-title="Live: Israel",VIP IL: YES Bollyshow
+http://livego.club:8080/USERNAME/PASSWORD/3340
+
+#EXTINF:-1 tvg-ID="4314" tvg-name="VIP IL: YES Bollyshow SD" tvg-logo="https://i.ibb.co/19x7697/yes-bollyshow.png" group-title="Live: Israel",VIP IL: YES Bollyshow
+http://livego.club:8080/USERNAME/PASSWORD/12028
+
+#EXTINF:-1 tvg-ID="5071" tvg-name="VIP IL: HOT Bollywood HD" tvg-logo="https://i.ibb.co/9ym9pZC/yes-Bollywoo-D.png" group-title="Live: Israel",VIP IL: HOT Bollywood HD (Russian)
+http://livego.club:8080/USERNAME/PASSWORD/61503
+
+#EXTINF:-1 tvg-ID="5071" tvg-name="VIP IL: HOT Bollywood" tvg-logo="https://i.ibb.co/9ym9pZC/yes-Bollywoo-D.png" group-title="Live: Israel",VIP IL: HOT Bollywood
+http://livego.club:8080/USERNAME/PASSWORD/62379
+        </code>
+        </pre>
+        
+      </form>
+</body>
+
+</html>
