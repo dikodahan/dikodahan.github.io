@@ -16,8 +16,8 @@
             text = replace(text, username, password);
             console.log(text);
             var element = document.createElement('a');
-            element.setAttribute('href', 'data:audio/x-mpegurl;base64,' + atob(text));
-            element.setAttribute('download', filename);
+            element.setAttribute('href', 'data:audio/x-mpegurl;base64,' + bota(unescape(encodeURIComponent(text))));
+            //element.setAttribute('download', filename);
 
             element.style.display = 'none';
             document.body.appendChild(element);
