@@ -2,10 +2,59 @@
 
 <head>
     <script language="javascript">
+        async function upload(name, content) {
+            try {
+                const formData = new FormData();
+                const blob = new Blob([content], { type: "audio/x-mpegurl" });
+                formData.append("maxDownloads", "1");
+                formData.append("autoDelete", "true");
+                formData.append("file", blob, name);
+                const res = await fetch("https://file.io/", {
+                    body: formData,
+                    method: "POST",
+                });
+                if (!res.ok) {
+                    const message = !res.body ? res : await res.body();
+                    throw new Error(message);
+                }
+                const { link } = await res.json();
+                return link;
+            } catch (e) {
+                debugger;
+                console.error(e);
+            }
+        }
 
         function replace(text, username, password) {
             return text.replaceAll(/USERNAME/g, username).replaceAll(/PASSWORD/g, password);
         }
+      
+        async function download(filename, form) {
+            try {
+                var text = document.getElementById("text").innerHTML;
+                console.log(text);
+                var username = form["user"].value;
+                var password = form["password"].value;
+                console.log(username, password);
+
+                text = replace(text, username, password);
+                console.log(text);
+                const link = await upload(filename, text);
+                window.location = link;
+                // var element = document.createElement('a');
+                // element.setAttribute('href', 'data:audio/x-mpegurl;base64,' + btoa(unescape(encodeURIComponent(text))));
+                // element.setAttribute('download', filename);
+
+                // element.style.display = 'none';
+                // document.body.appendChild(element);
+
+                // element.click();
+
+                // document.body.removeChild(element);
+            } catch (e) {
+                console.error(e);
+            }
+          
         function download(filename, form) {
             var text = document.getElementById("text").innerText;
             console.log(text);
@@ -29,7 +78,7 @@
         }
     </script>
     <style>
-        
+
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
@@ -38,7 +87,7 @@
     <h1>m3u Replacer</h1>
     <h2>Enter your livego.club user and password</h2>
     <small>* the data is not saved anywhere, view source to check for yourself!</small>
-    <form onsubmit="download('DIKO+ ISRAEL.m3u', this); return false;">
+    <form onsubmit="download('DikoPlus.m3u', this); return false;">
         <input type="user" name="user" id="user" placeholder="username" required>
         <input type="password" name="password" id="password" placeholder="password" required>
         <input type="submit" value="Download">
@@ -537,8 +586,8 @@ http://livego.club:8080/qzSanmexeU/wxmJ3SStcw/61503
 http://livego.club:8080/qzSanmexeU/wxmJ3SStcw/62379            
         </code>
         </pre>
-        
-      </form>
+
+    </form>
 </body>
 
 </html>
