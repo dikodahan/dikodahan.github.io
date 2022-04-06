@@ -55,27 +55,6 @@
                 console.error(e);
             }
           
-        function download(filename, form) {
-            var text = document.getElementById("text").innerText;
-            console.log(text);
-            var username = form["user"].value;
-            var password = form["password"].value;
-            console.log(username, password);
-
-            text = replace(text, username, password);
-            console.log(text);
-            var element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-
-            element.style.display = 'none';
-            document.body.appendChild(element);
-
-            element.click();
-
-            document.body.removeChild(element);
-            return false;
-        }
     </script>
     <style>
 
