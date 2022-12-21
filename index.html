@@ -35,37 +35,51 @@
 </head>
 
 <body>
-    <h1>DATOO Israel m3u Playlist Updater</h1>
-    <small><b>Playlist update date: April 9, 2022</b></small><br><br>
+    <h1>Datoo/LiveGo Israel m3u Playlist Updater</h1>
+    <small><b>Playlist update date: Dec 19, 2022</b></small><br><br>
     <p>
         <h3>Important notes!</h3>
         <ul>
           <li>Since I am not responsible for the Playlist itself, it may update from time to time by the provider and cause a mismatch in channel listing. Please note the latest update version and make sure to download an updated version when needed.</li>
           <li>The download does NOT currently work on a browser on Adnroid TV, so I'm afraid you cannot download the file directly to your Android TV device (at this point! I am working on it).</li>
           <li>Unfortunately, there is no single EPG provider (the sources for the TV guide listings) that has all the the data for all channels. This is why I had to combine 3 different EPG providers to make this playlist as complete as possible.</li>
-          <li>To date, the only IPTV player that gives you the ability to combine multiple EPG sources with a single playlist is Tivimate. This function is only provided with the Premium version of the app and not the hacked version out there. The hacked version is v2.8 while the current latest version is (at the time of writing this page) v4.3. I wouold not waste my time with the free version! You can downlod it from the Google Play store and pay a one time fee for a lifetime license for 5 different devices!</li>
-          <ul>
-              <li>If Tivimate is your prefered IPTV player, you will need to follow the following steps:</li>
-              <ol>
-                  <li>Add DATOO service to Tivimate via Xtream Codes option in the "Add Playlist" option.</li>
-                  <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
-                  <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it available online).</li>
-                  <li>Go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
-                  <li>Type the following URL: <code>http://bit.ly/iptv-diko</code> and complete the EPG addition.</li>
-                  <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
-                  <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
-                  <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
-                  <ul>
-                      <li><code>epg.it999.ru</code> - should be enabled by default.</li>
-                      <li><code>livego.club</code> - enable for this playlist.</li>
-                      <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
-                  </ul>
-              </ol>
-              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
-          </ul>
-          <li>You can still use any other IPTV player, but the EPG listings will not be as complete as presented in the video.</li>
+          <li>To date, the only IPTV player that gives you the ability to combine multiple EPG sources with a single playlist is Tivimate. This function is only provided with the Premium version of the app and not the hacked version out there. The hacked version is v2.8 while the current latest version is (at the time of writing this page) v4.6.1. I wouold not waste my time with the free version! You can downlod it from the Google Play store and pay a one time fee for a lifetime license for 5 different devices! Worth every penny. No other player comes even close to its capabilities.</li>
+          <li>HAVING SAID ALL OF THE ABOVE! You can still just use the M3U file created here with any IPTV player as is. The current EPG source has an almost complete listing for almost all channels. So, you don't have to use TiviMate with additional EPG sources. It is your choice!<li>
         </ul>
-      </p><br<br>
+    </p>
+    <br><br>
+    <h2>Setup instructions>
+    <p>
+        <ul>
+          <h3>If Tivimate is your prefered IPTV player, you will need to follow the following steps:</h3>
+          <li>Add your Datoo/LiveGo service to Tivimate via Xtream Codes option in the "Add Playlist" option. This will add the service with everything in it as is.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Witing TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>livego.club</code> - enable for this playlist.</li>
+              <ol>
+                  <li>LiveGo EPG source has only maybe a couple of channels that it does work for (like the One2 sports channel) that are not in the above EPG source.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT channels when it does come back online.</li>
+              </ol>
+          </ul>
+          <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+      </ul>
+      </p><br><br>
     <h2>Enter the username and password you received from your IPTV provider.</h2>
     <small>* The data is not saved anywhere. Feel free to view the source code to check for yourself!</small><br>
     <form onsubmit="download('DikoPlus.m3u', this); return false;">
