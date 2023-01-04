@@ -13,7 +13,7 @@ http://livego.club:8080/USERNAME/PASSWORD/19374
 #EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png" group-title="Israel: Main Channels",Channel 12 HD קשת
 http://livego.club:8080/USERNAME/PASSWORD/16272
 
-#EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png"group-title="Israel: Main Channels",Channel 12 SD קשת
+#EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png" group-title="Israel: Main Channels",Channel 12 SD קשת
 http://livego.club:8080/USERNAME/PASSWORD/14596
 
 #EXTINF:-1 tvg-id="רשת.[Reshet.HD].il" tvg-logo="https://i.ibb.co/vZnz4w9/Channel13.png" group-title="Israel: Main Channels",Channel 13 FHD רשת
