@@ -44,6 +44,7 @@
         /* Style the buttons inside the tab */
         .tab button {
           background-color: inherit;
+          color: black;
           float: left;
           border: none;
           outline: none;
@@ -71,6 +72,15 @@
           border-top: none;
         }
         
+        /* Set the direction of he form to the right */
+        form {
+          direction: rtl;
+        }
+        input {
+          display: block;
+          direction: ltr;
+        }
+        
      </STYLE>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
@@ -91,104 +101,8 @@
     </p>
     <br><br>
     <h2 class="hebh2">הוראות שימוש באשף</h2>
-    <p class="hebp">בחר את נגן ה-IPTV שלך</p>
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Tivimate')">Tivimate</button>
-      <button class="tablinks" onclick="openCity(event, 'Televizo')">Televizo</button>
-      <button class="tablinks" onclick="openCity(event, 'IPTV-Smarters')">IPTV Smarters</button>
-    </div>
     
-    <div id="Tivimate" class="tabcontent">
-      <p class="hebp">
-        <ul dir="rtl">
-          <h3>עקוב אחר הצעדים הבאים:</h3>
-          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
-          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
-          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
-          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
-          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
-            <ol>
-              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
-            </ol>
-          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
-          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
-          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
-          <ul>
-              <li><code>github.com</code> - should be enabled by default.</li>
-              <ol>
-                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
-              </ol>
-              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
-              <ol>
-                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
-              </ol>
-              </ul>
-              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
-          </ul>
-        </p>
-      </div><br><br>
-
-    <div id="Televizo" class="tabcontent">
-      <p class="hebp">
-        <ul dir="rtl">
-          <h3>עקוב אחר הצעדים הבאים:</h3>
-          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
-          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
-          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
-          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
-          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
-            <ol>
-              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
-            </ol>
-          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
-          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
-          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
-          <ul>
-              <li><code>github.com</code> - should be enabled by default.</li>
-              <ol>
-                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
-              </ol>
-              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
-              <ol>
-                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
-              </ol>
-              </ul>
-              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
-          </ul>
-        </p>
-      </div><br><br>
-
-    <div id="IPTV-Smarters" class="tabcontent">
-      <p class="hebp">
-        <ul dir="rtl">
-          <h3>עקוב אחר הצעדים הבאים:</h3>
-          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
-          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
-          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
-          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
-          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
-            <ol>
-              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
-            </ol>
-          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
-          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
-          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
-          <ul>
-              <li><code>github.com</code> - should be enabled by default.</li>
-              <ol>
-                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
-              </ol>
-              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
-              <ol>
-                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
-              </ol>
-              </ul>
-              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
-          </ul>
-        </p>
-      </div><br><br>
-    
-    <h2 class="hebh2">ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך.</h2>
+    <h3 class="hebh3">ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך.</h2>
     <form onsubmit="download('DikoPlus.m3u', this); return false;">
         <input type="user" name="user" id="user" placeholder="username" required>
         <input type="password" name="password" id="password" placeholder="password" required>
@@ -678,6 +592,104 @@ http://livego.club:8080/USERNAME/PASSWORD/20368
         </pre>
         
       </form>
+    
+    <p class="hebp">בחר את נגן ה-IPTV שלך</p>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Tivimate')">Tivimate</button>
+      <button class="tablinks" onclick="openCity(event, 'Televizo')">Televizo</button>
+      <button class="tablinks" onclick="openCity(event, 'IPTV-Smarters')">IPTV Smarters</button>
+    </div>
+    
+    <div id="Tivimate" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+          </ul>
+        </p>
+      </div>
+
+    <div id="Televizo" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+          </ul>
+        </p>
+      </div>
+
+    <div id="IPTV-Smarters" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+          </ul>
+        </p>
+      </div>
+   
       <br><br><br>
       <p>
         <h3>Disclaimer!</h3>
