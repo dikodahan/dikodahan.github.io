@@ -1,0 +1,578 @@
+<html>
+
+<head>
+    <script language="javascript">
+
+        function replace(text, username, password) {
+            return text.replaceAll(/USERNAME/g, username).replaceAll(/PASSWORD/g, password);
+        }
+        function download(filename, form) {
+            var text = document.getElementById("text").innerText;
+            console.log(text);
+            var username = form["user"].value;
+            var password = form["password"].value;
+            console.log(username, password);
+
+            text = replace(text, username, password);
+            console.log(text);
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+            return false;
+        }
+    </script>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+    <h1>Datoo/LiveGo Israel m3u Playlist Updater</h1>
+    <small><b>Playlist update date: Jan 4, 2023</b></small><br><br>
+    <p>
+        <h3>Important notes!</h3>
+        <ul>
+          <li>Since I am not responsible for the Playlist itself, it may update from time to time by the provider and cause a mismatch in channel listing. Please note the latest update version and make sure to download an updated version when needed.</li>
+          <li>The download does NOT currently work on a browser on Adnroid TV, so I'm afraid you cannot download the file directly to your Android TV device (at this point! I am working on it).</li>
+          <li>Unfortunately, there is no single EPG provider (the sources for the TV guide listings) that has all the the data for all channels. This is why I had to combine 3 different EPG providers to make this playlist as complete as possible.</li>
+          <li>To date, the only IPTV player that gives you the ability to combine multiple EPG sources with a single playlist is Tivimate. This function is only provided with the Premium version of the app and not the hacked version out there. The hacked version is v2.8 while the current latest version is (at the time of writing this page) v4.6.1. I wouold not waste my time with the free version! You can downlod it from the Google Play store and pay a one time fee for a lifetime license for 5 different devices! Worth every penny. No other player comes even close to its capabilities.</li>
+          <li>HAVING SAID ALL OF THE ABOVE! You can still just use the M3U file created here with any IPTV player as is. The current EPG source has an almost complete listing for almost all channels. So, you don't have to use TiviMate with additional EPG sources. It is your choice!</li>
+          <li> If you prefer not to have the file auto-generated for you, you can manually download the template file and change it yourself using this <a href="https://raw.githubusercontent.com/dikodahan/dikodahan.github.io/master/DikoPlus.m3u">Download link</a>.</li>
+        </ul>
+    </p>
+    <br><br>
+    <h2>Setup instructions</h2>
+    <p>
+        <ul>
+          <h3>If Tivimate is your prefered IPTV player, you will need to follow the following steps:</h3>
+          <li>Add your Datoo/LiveGo service to Tivimate via Xtream Codes option in the "Add Playlist" option. This will add the service with everything in it as is.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+          </ul>
+          <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+      </ul>
+      </p><br><br>
+    <h2>Enter the username and password you received from your IPTV provider.</h2>
+    <small>* The data is not saved anywhere. <a href="https://github.com/dikodahan/dikodahan.github.io/blob/master/index.html">Feel free to view the source code to check for yourself!</a></small><br>
+    <form onsubmit="download('DikoPlus.m3u', this); return false;">
+        <input type="user" name="user" id="user" placeholder="username" required>
+        <input type="password" name="password" id="password" placeholder="password" required>
+        <input type="submit" value="Download">
+        <pre readonly style="display: none;">
+            <code id="text">
+#EXTM3U url-tvg="https://github.com/epgshare01/share01/raw/master/epg_ripper_ALL_SOURCES1.xml.gz"
+
+
+#EXTINF:-1 tvg-id="כאן.11.[Kan.HD].il" tvg-logo="https://i.imgur.com/1lJWCuQ.png" group-title="Israel: Main Channels",כאן 11
+http://livego.club:8080/USERNAME/PASSWORD/18131
+
+#EXTINF:-1 tvg-id="כאן.11.[Kan.HD].il" tvg-logo="https://i.imgur.com/1lJWCuQ.png" group-title="Israel: Main Channels",כאן 11
+http://livego.club:8080/USERNAME/PASSWORD/3298
+
+#EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png" group-title="Israel: Main Channels",קשת 12
+http://livego.club:8080/USERNAME/PASSWORD/19374
+
+#EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png" group-title="Israel: Main Channels",קשת 12
+http://livego.club:8080/USERNAME/PASSWORD/16272
+
+#EXTINF:-1 tvg-id="קשת.[Keshet.HD].il" tvg-logo="https://i.ibb.co/b3zb05L/12-Keshet.png" group-title="Israel: Main Channels",קשת 12
+http://livego.club:8080/USERNAME/PASSWORD/14596
+
+#EXTINF:-1 tvg-id="רשת.[Reshet.HD].il" tvg-logo="https://i.ibb.co/vZnz4w9/Channel13.png" group-title="Israel: Main Channels",רשת 13
+http://livego.club:8080/USERNAME/PASSWORD/19375
+
+#EXTINF:-1 tvg-id="רשת.[Reshet.HD].il" tvg-logo="https://i.ibb.co/vZnz4w9/Channel13.png" group-title="Israel: Main Channels",רשת 13
+http://livego.club:8080/USERNAME/PASSWORD/20218
+
+#EXTINF:-1 tvg-id="רשת.[Reshet.HD].il" tvg-logo="https://i.ibb.co/vZnz4w9/Channel13.png" group-title="Israel: Main Channels",רשת 13
+http://livego.club:8080/USERNAME/PASSWORD/3299
+
+#EXTINF:-1 tvg-id="ערוץ.14.[Channel.14.(Channel.20).HD].il" tvg-logo="https://i.imgur.com/t9nSWSV.png" group-title="Israel: Main Channels",ערוץ 14
+http://livego.club:8080/USERNAME/PASSWORD/61503
+
+#EXTINF:-1 tvg-id="ערוץ.14.[Channel.14.(Channel.20).HD].il" tvg-logo="https://i.imgur.com/t9nSWSV.png" group-title="Israel: Main Channels",ערוץ 14
+http://livego.club:8080/USERNAME/PASSWORD/16514
+
+#EXTINF:-1 tvg-id="ערוץ.14.[Channel.14.(Channel.20).HD].il" tvg-logo="https://i.imgur.com/t9nSWSV.png" group-title="Israel: Main Channels",ערוץ 14
+http://livego.club:8080/USERNAME/PASSWORD/3301
+
+#EXTINF:-1 tvg-id="כאן.חינוכית.[Kan.Educational].il" tvg-logo="https://i.ibb.co/MpMp6td/KAN-hinohit.png" group-title="Israel: Main Channels",כאן חינוכית
+http://livego.club:8080/USERNAME/PASSWORD/19376
+
+#EXTINF:-1 tvg-id="כאן.חינוכית.[Kan.Educational].il" tvg-logo="https://i.ibb.co/MpMp6td/KAN-hinohit.png" group-title="Israel: Main Channels",כאן חינוכית
+http://livego.club:8080/USERNAME/PASSWORD/40771
+
+#EXTINF:-1 tvg-id="ערוץ.הכנסת.[Knesset].il" tvg-logo="https://i.ibb.co/tC2CR1m/Knesset.png" group-title="Israel: Main Channels",ערוץ הכנסת
+http://livego.club:8080/USERNAME/PASSWORD/14595
+
+#EXTINF:-1 tvg-ID="ערוץ.הכנסת.[Knesset].il" tvg-name="Knesset" tvg-logo="https://i.ibb.co/tC2CR1m/Knesset.png" group-title="Israel: Main Channels",ערוץ הכנסת
+http://livego.club:8080/USERNAME/PASSWORD/12033
+
+#EXTINF:-1 tvg-ID="ערוץ.הידברות.[Hidabroot].il" tvg-name="Hidabroot Channel" tvg-logo="https://i.ibb.co/Z2MDZPK/hidabrut.png" group-title="Israel: Main Channels",ערוץ ההידברות
+http://livego.club:8080/USERNAME/PASSWORD/7343
+
+#EXTINF:-1 tvg-id="ספורט.1.SD.[Sport.1.single.(63)].il" tvg-logo="https://i.ibb.co/NSKhsvL/sport1.png" group-title="Israel: Sports",יס ספורט 1
+http://livego.club:8080/USERNAME/PASSWORD/20415
+
+#EXTINF:-1 tvg-id="ספורט.1.HD.[Sport.1.HD].il" tvg-logo="https://i.ibb.co/NSKhsvL/sport1.png" group-title="Israel: Sports",יס ספורט 1
+http://livego.club:8080/USERNAME/PASSWORD/5958
+
+#EXTINF:-1 tvg-ID="ספורט.2.HD.[Sport.2.HD].il" tvg-logo="https://i.ibb.co/x7VJFPD/sport2.png" group-title="Israel: Sports",יס ספורט 2
+http://livego.club:8080/USERNAME/PASSWORD/21901
+
+#EXTINF:-1 tvg-ID="ספורט.2.HD.[Sport.2.HD].il" tvg-logo="https://i.ibb.co/x7VJFPD/sport2.png" group-title="Israel: Sports",יס ספורט 2
+http://livego.club:8080/USERNAME/PASSWORD/5957
+
+#EXTINF:-1 tvg-ID="ספורט.3.HD.[Sport.3.HD].il" tvg-logo="https://i.ibb.co/9c24FrV/sport3.png" group-title="Israel: Sports",יס ספורט 3
+http://livego.club:8080/USERNAME/PASSWORD/21899
+
+#EXTINF:-1 tvg-ID="ספורט.3.HD.[Sport.3.HD].il" tvg-logo="https://i.ibb.co/9c24FrV/sport3.png" group-title="Israel: Sports",יס ספורט 3
+http://livego.club:8080/USERNAME/PASSWORD/11471
+
+#EXTINF:-1 tvg-ID="ספורט.4.HD.[Sport.4.HD].il" tvg-logo="https://i.ibb.co/kXRZMvf/sport4.png" group-title="Israel: Sports",יס ספורט 4
+http://livego.club:8080/USERNAME/PASSWORD/21900
+
+#EXTINF:-1 tvg-ID="ספורט.4.HD.[Sport.4.HD].il" tvg-logo="https://i.ibb.co/kXRZMvf/sport4.png" group-title="Israel: Sports",יס ספורט 4
+http://livego.club:8080/USERNAME/PASSWORD/11472
+
+#EXTINF:-1 tvg-ID="5sport.HD.[Sport.5.HD.(55)].il" tvg-name="Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Israel: Sports",ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/83774
+
+#EXTINF:-1 tvg-ID="5sport.HD.[Sport.5.HD.(55)].il" tvg-name="Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Israel: Sports",ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/20416
+
+#EXTINF:-1 tvg-ID="5sport.HD.[Sport.5.HD.(55)].il" tvg-name="Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Israel: Sports",ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/19813
+
+#EXTINF:-1 tvg-ID="5sport.HD.[Sport.5.HD.(55)].il" tvg-name="Sport 5 HD" tvg-logo="https://i.ibb.co/5ngL2DN/5-Sport.png" group-title="Israel: Sports",ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/41502
+
+#EXTINF:-1 tvg-ID="5SPORT.4K.[Sport.5.4K].il" tvg-name="Sport 5 4K" tvg-logo="https://i.ibb.co/gJk555m/5-sport-4k.png" group-title="Israel: Sports",4K ספורט 5
+http://livego.club:8080/USERNAME/PASSWORD/50637
+
+#EXTINF:-1 tvg-ID="5LIVE.HD.[Sport.5.Live.HD.(58)].il" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Israel: Sports",ספורט 5 לייב
+http://livego.club:8080/USERNAME/PASSWORD/83775
+
+#EXTINF:-1 tvg-ID="5LIVE.HD.[Sport.5.Live.HD.(58)].il" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Israel: Sports",ספורט 5 לייב
+http://livego.club:8080/USERNAME/PASSWORD/25825
+
+#EXTINF:-1 tvg-ID="5LIVE.HD.[Sport.5.Live.HD.(58)].il" tvg-logo="https://i.ibb.co/R9J6bcD/5-Live.png" group-title="Israel: Sports",ספורט 5 לייב
+http://livego.club:8080/USERNAME/PASSWORD/16521
+
+#EXTINF:-1 tvg-ID="5STARS.[Sport.5.Stars.HD.(59)].il" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Israel: Sports",ספורט 5 סטארס
+http://livego.club:8080/USERNAME/PASSWORD/83776
+
+#EXTINF:-1 tvg-ID="5STARS.[Sport.5.Stars.HD.(59)].il" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Israel: Sports",ספורט 5 סטארס
+http://livego.club:8080/USERNAME/PASSWORD/5955
+
+#EXTINF:-1 tvg-ID="5STARS.[Sport.5.Stars.HD.(59)].il" tvg-logo="https://i.ibb.co/12Jxs3m/5-stars.png" group-title="Israel: Sports",ספורט 5 סטארס
+http://livego.club:8080/USERNAME/PASSWORD/25826
+
+#EXTINF:-1 tvg-ID="5PLUS.HD.[Sport.5+.HD.(56)].il" tvg-logo="https://i.ibb.co/LhTj6FJ/5-Plus.png" group-title="Israel: Sports",ספורט 5 פלוס
+http://livego.club:8080/USERNAME/PASSWORD/12823
+
+#EXTINF:-1 tvg-ID="5PLUS.HD.[Sport.5+.HD.(56)].il" tvg-logo="https://i.ibb.co/LhTj6FJ/5-Plus.png" group-title="Israel: Sports",ספורט 5 פלוס
+http://livego.club:8080/USERNAME/PASSWORD/22315
+
+#EXTINF:-1 tvg-ID="5GOLD.[Sport.5.Gold.(57)].il" tvg-logo="https://i.ibb.co/bQK9gj5/5-Gold.png" group-title="Israel: Sports",ספורט 5 גולד
+http://livego.club:8080/USERNAME/PASSWORD/11725
+
+#EXTINF:-1 tvg-ID="Fox.Sports.Racing.HDTV.(FOXSR).ca" tvg-name="Fox Sport HD" tvg-logo="https://i.ibb.co/CmT8QMh/Fox-Sports-Racing.png" group-title="Israel: Sports",פוקס ספורט מרוצים
+http://livego.club:8080/USERNAME/PASSWORD/3341
+
+#EXTINF:-1 tvg-id="ONE.[ONE.HD].il" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Israel: Sports",ONE 1 FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83772
+
+#EXTINF:-1 tvg-id="ONE.[ONE.HD].il" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Israel: Sports",ONE 1 FHD
+http://livego.club:8080/USERNAME/PASSWORD/21903
+
+#EXTINF:-1 tvg-id="ONE.[ONE.HD].il" tvg-logo="https://i.ibb.co/Hqky1H5/ONE-sport.png" group-title="Israel: Sports",ONE 1 HD
+http://livego.club:8080/USERNAME/PASSWORD/5956
+
+#EXTINF:-1 tvg-id="ONE2.[ONE2.HD].il" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Israel: Sports",ONE 2 FHD P50
+http://livego.club:8080/USERNAME/PASSWORD/83773
+
+#EXTINF:-1 tvg-id="ONE2.[ONE2.HD].il" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Israel: Sports",ONE 2 FHD
+http://livego.club:8080/USERNAME/PASSWORD/25827
+
+#EXTINF:-1 tvg-id="ONE2.[ONE2.HD].il" tvg-logo="https://i.ibb.co/jf2NZw2/ONE2-sport.png" group-title="Israel: Sports",ONE 2 HD
+http://livego.club:8080/USERNAME/PASSWORD/19104
+
+#EXTINF:-1 tvg-ID="EUROSPORT.[EUROSPORT.HD].il" tvg-name="Eurosport 1 HD" tvg-logo="https://i.ibb.co/28XrvzK/eurosport1.png" group-title="Israel: Sports",Eurosport 1 HD
+http://livego.club:8080/USERNAME/PASSWORD/19377
+
+#EXTINF:-1 tvg-ID="EUROSPORT.2.[Eurosport.2].il" tvg-name="Eurosport 2 HD" tvg-logo="https://i.ibb.co/gzjp9vN/eurosport2.png" group-title="Israel: Sports",Eurosport 2 HD
+http://livego.club:8080/USERNAME/PASSWORD/19379
+
+#EXTINF:-1 tvg-ID="Trace.Sport.Stars.HD.ba" tvg-name="Trace Spôrt Stars" tvg-logo="https://i.ibb.co/196tzt2/TraceSS.png" group-title="Israel: Sports",Trace ספורט סטארס
+http://livego.club:8080/USERNAME/PASSWORD/63091
+
+#EXTINF:-1 tvg-ID="ערוץ.ההומור.[Humor.Channel].il" tvg-name="The Humor Channel" tvg-logo="https://i.ibb.co/YRcBX0N/Humor-Channel-png.jpg" group-title="Israel: YES",ערוץ ההומור
+http://livego.club:8080/USERNAME/PASSWORD/19380
+
+#EXTINF:-1 tvg-ID="yes.TV.ACTION.[yes.TV.Action].il" tvg-name="YES YES Movies TV Action HD" tvg-logo="https://i.ibb.co/BLMsMPg/yes-TV-ACTION.png" group-title="Israel: YES",YES טלויזיה פעולה
+http://livego.club:8080/USERNAME/PASSWORD/45723
+
+#EXTINF:-1 tvg-ID="yes.TV.ACTION.[yes.TV.Action].il" tvg-name="YES YES Movies TV Action HD" tvg-logo="https://i.ibb.co/BLMsMPg/yes-TV-ACTION.png" group-title="Israel: YES",YES טלויזיה פעולה
+http://livego.club:8080/USERNAME/PASSWORD/16517
+
+#EXTINF:-1 tvg-ID="yes.TV.ACTION.[yes.TV.Action].il" tvg-name="YES YES Movies TV Action HD" tvg-logo="https://i.ibb.co/BLMsMPg/yes-TV-ACTION.png" group-title="Israel: YES",YES טלויזיה פעולה
+http://livego.club:8080/USERNAME/PASSWORD/25833
+
+#EXTINF:-1 tvg-ID="yes.TV.COMEDY.[yes.TV.Comedy].il" tvg-name="YES YES Movies TV Comedy HD" tvg-logo="https://i.ibb.co/bNDssb8/yes-TV-COMEDY.png" group-title="Israel: YES",YES טלויזיה קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/45725
+
+#EXTINF:-1 tvg-ID="yes.TV.COMEDY.[yes.TV.Comedy].il" tvg-name="YES YES Movies TV Comedy HD" tvg-logo="https://i.ibb.co/bNDssb8/yes-TV-COMEDY.png" group-title="Israel: YES",YES טלויזיה קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/16518
+
+#EXTINF:-1 tvg-ID="yes.TV.COMEDY.[yes.TV.Comedy].il" tvg-name="YES YES Movies TV Comedy HD" tvg-logo="https://i.ibb.co/bNDssb8/yes-TV-COMEDY.png"  group-title="Israel: YES",YES טלויזיה קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/25837
+
+#EXTINF:-1 tvg-ID="yes.TV.DRAMA.[yes.TV.Drama].il" tvg-name="YES YES Movies TV Drama HD" tvg-logo="https://i.ibb.co/pXpmG46/yes-TV-DRAMA.png" group-title="Israel: YES",YES טלויזיה דרמה
+http://livego.club:8080/USERNAME/PASSWORD/45722
+
+#EXTINF:-1 tvg-ID="yes.TV.DRAMA.[yes.TV.Drama].il" tvg-name="YES YES Movies TV Drama HD" tvg-logo="https://i.ibb.co/pXpmG46/yes-TV-DRAMA.png" group-title="Israel: YES",YES טלויזיה דרמה
+http://livego.club:8080/USERNAME/PASSWORD/16520
+
+#EXTINF:-1 tvg-ID="yes.TV.DRAMA.[yes.TV.Drama].il" tvg-name="YES YES Movies TV Drama HD" tvg-logo="https://i.ibb.co/pXpmG46/yes-TV-DRAMA.png" group-title="Israel: YES",YES טלויזיה דרמה
+http://livego.club:8080/USERNAME/PASSWORD/25835
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.ACTION.[yes.Movies.Action].il" tvg-name="YES YES Movies Action HD" tvg-logo="https://i.ibb.co/MRKVfZc/yes-MOVIES-ACTION.png" group-title="Israel: YES",YES סרטים פעולה
+http://livego.club:8080/USERNAME/PASSWORD/45721
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.ACTION.[yes.Movies.Action].il" tvg-name="YES YES Movies Action HD" tvg-logo="https://i.ibb.co/MRKVfZc/yes-MOVIES-ACTION.png" group-title="Israel: YES",YES סרטים פעולה
+http://livego.club:8080/USERNAME/PASSWORD/16513
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.ACTION.[yes.Movies.Action].il" tvg-name="YES YES Movies Action HD" tvg-logo="https://i.ibb.co/MRKVfZc/yes-MOVIES-ACTION.png" group-title="Israel: YES",YES סרטים פעולה
+http://livego.club:8080/USERNAME/PASSWORD/25829
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.ACTION.[yes.Movies.Action].il" tvg-name="YES YES Movies Action HD" tvg-logo="https://i.ibb.co/MRKVfZc/yes-MOVIES-ACTION.png" group-title="Israel: YES",YES סרטים פעולה
+http://livego.club:8080/USERNAME/PASSWORD/64338
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.KIDS.[yes.Movies.Kids].il" tvg-name="YES YES Movies Kids HD" tvg-logo="https://i.ibb.co/1qSff6Q/yes-MOVIES-KIDS.png" group-title="Israel: YES",YES סרטים ילדים
+http://livego.club:8080/USERNAME/PASSWORD/45718
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.KIDS.[yes.Movies.Kids].il" tvg-name="YES YES Movies Kids HD" tvg-logo="https://i.ibb.co/1qSff6Q/yes-MOVIES-KIDS.png" group-title="Israel: YES",YES סרטים ילדים
+http://livego.club:8080/USERNAME/PASSWORD/60460
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.DRAMA.[yes.Movies.Drama].il" tvg-name="YES YES Movies Drama HD" tvg-logo="https://i.ibb.co/vBrJw80/yes-MOVIES-DRAMA.png" group-title="Israel: YES",YES סרטים דרמה
+http://livego.club:8080/USERNAME/PASSWORD/45719
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.DRAMA.[yes.Movies.Drama].il" tvg-name="YES YES Movies Drama HD" tvg-logo="https://i.ibb.co/vBrJw80/yes-MOVIES-DRAMA.png" group-title="Israel: YES",YES סרטים דרמה
+http://livego.club:8080/USERNAME/PASSWORD/16512
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.DRAMA.[yes.Movies.Drama].il" tvg-name="YES YES Movies Drama HD" tvg-logo="https://i.ibb.co/vBrJw80/yes-MOVIES-DRAMA.png" group-title="Israel: YES",YES סרטים דרמה
+http://livego.club:8080/USERNAME/PASSWORD/25828
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.DRAMA.[yes.Movies.Drama].il" tvg-name="YES YES Movies Drama HD" tvg-logo="https://i.ibb.co/vBrJw80/yes-MOVIES-DRAMA.png" group-title="Israel: YES",YES סרטים דרמה
+http://livego.club:8080/USERNAME/PASSWORD/64340
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.COMEDY.[yes.Movies.Comedy].il" tvg-name="YES YES Movies Comedy HD" tvg-logo="https://i.ibb.co/qgwFhdQ/yes-MOVIES-COMDY.png" group-title="Israel: YES",YES סרטים קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/45720
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.COMEDY.[yes.Movies.Comedy].il" tvg-name="YES YES Movies Comedy HD" tvg-logo="https://i.ibb.co/qgwFhdQ/yes-MOVIES-COMDY.png" group-title="Israel: YES",YES סרטים קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/16515
+
+#EXTINF:-1 tvg-ID="yes.MOVIES.COMEDY.[yes.Movies.Comedy].il" tvg-name="YES YES Movies Comedy HD" tvg-logo="https://i.ibb.co/qgwFhdQ/yes-MOVIES-COMDY.png" group-title="Israel: YES",YES סרטים קומדיה
+http://livego.club:8080/USERNAME/PASSWORD/25831
+
+#EXTINF:-1 tvg-ID="yes.קולנוע.ישראלי.[yes.Israeli.Cinema.HD].il" tvg-name="YES Cinema Israeli HD" [Multi-Sub]" tvg-logo="https://i.ibb.co/Wfj9x6R/yes-ISRAELI.png" group-title="Israel: YES",YES קולנוע ישראלי
+http://livego.club:8080/USERNAME/PASSWORD/26119
+
+#EXTINF:-1 tvg-ID="yes.קולנוע.ישראלי.[yes.Israeli.Cinema.HD].il" tvg-name="YES Cinema Israeli HD" tvg-logo="https://i.ibb.co/Wfj9x6R/yes-ISRAELI.png" group-title="Israel: YES",YES קולנוע ישראלי
+http://livego.club:8080/USERNAME/PASSWORD/16522
+
+#EXTINF:-1 tvg-ID="yes.דוקו.[yes.Docu.HD].il" tvg-name="VIP IL: YES Docu FHD" tvg-logo="https://i.ibb.co/YZ6wNhv/yes-DOCO.png" group-title="Israel: YES",YES דוקו
+http://livego.club:8080/USERNAME/PASSWORD/16519
+
+#EXTINF:-1 tvg-ID="yes.דוקו.[yes.Docu.HD].il" tvg-name="VIP IL: YES Docu FHD" tvg-logo="https://i.ibb.co/YZ6wNhv/yes-DOCO.png" group-title="Israel: YES",YES דוקו
+http://livego.club:8080/USERNAME/PASSWORD/25834
+
+#EXTINF:-1 tvg-ID="yes.דוקו.[yes.Docu.HD].il" tvg-name="VIP IL: YES Docu FHD" tvg-logo="https://i.ibb.co/YZ6wNhv/yes-DOCO.png" group-title="Israel: YES",YES דוקו
+http://livego.club:8080/USERNAME/PASSWORD/25832
+
+#EXTINF:-1 tvg-id="ערוץ.3.il" tvg-name="HOT 3 HD" tvg-logo="https://i.ibb.co/Cmq24Hf/HOT-3.png" group-title="Israel: HOT",הוט 3
+http://livego.club:8080/USERNAME/PASSWORD/6106
+
+#EXTINF:-1 tvg-id="ערוץ.8.il" tvg-name="HOT 8 HD" tvg-logo="https://i.ibb.co/kGg4c26/HOT-8.png" group-title="Israel: HOT",הוט 8
+http://livego.club:8080/USERNAME/PASSWORD/8141
+
+#EXTINF:-1 tvg-ID="2691" tvg-name="HOT ZONE HD" tvg-logo="https://i.ibb.co/3CrKZpP/HOT-Zone.png" group-title="Israel: HOT",ZONE הוט
+http://livego.club:8080/USERNAME/PASSWORD/6107
+
+#EXTINF:-1 tvg-ID="5024" tvg-name="HOT Comedy Central HD" tvg-logo="https://i.ibb.co/HDVknX5/HOT-Comedy-Central.png" group-title="Israel: HOT",הוט קומדי סנטרל
+http://livego.club:8080/USERNAME/PASSWORD/6104
+
+#EXTINF:-1 tvg-ID="הוט.בידור.ישראלי.il" tvg-name="HOT Bidur" tvg-logo="https://i.ibb.co/5jcfbhy/HOT-Bidur.png" group-title="Israel: HOT",הוט בידור
+http://livego.club:8080/USERNAME/PASSWORD/6102
+
+#EXTINF:-1 tvg-id="2688" tvg-name="HOT Cinema 1" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",הוט סינמה 1
+http://livego.club:8080/USERNAME/PASSWORD/23802
+
+#EXTINF:-1 tvg-id="2688" tvg-name="HOT Cinema 1 HD" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",הוט סינמה 1
+http://livego.club:8080/USERNAME/PASSWORD/6108
+
+#EXTINF:-1 tvg-ID="2702" tvg-name="HOT Cinema 2" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",הוט סינמה 2
+http://livego.club:8080/USERNAME/PASSWORD/25821
+
+#EXTINF:-1 tvg-ID="2702" tvg-name="HOT Cinema 2 HD" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",הוט סינמה 2
+http://livego.club:8080/USERNAME/PASSWORD/5960
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="HOT Cinema 3" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",הוט סינמה 3
+http://livego.club:8080/USERNAME/PASSWORD/64397
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="HOT Cinema 3" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",הוט סינמה 3
+http://livego.club:8080/USERNAME/PASSWORD/25822
+
+#EXTINF:-1 tvg-ID="2703" tvg-name="HOT Cinema 3 HD" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",הוט סינמה 3
+http://livego.club:8080/USERNAME/PASSWORD/5961
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="HOT Cinema 4" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",הוט סינמה 4
+http://livego.club:8080/USERNAME/PASSWORD/64339
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="HOT Cinema 4" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",הוט סינמה 4
+http://livego.club:8080/USERNAME/PASSWORD/25823
+
+#EXTINF:-1 tvg-ID="2687" tvg-name="HOT Cinema 4 HD" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",הוט סינמה 4
+http://livego.club:8080/USERNAME/PASSWORD/6109
+
+#EXTINF:-1 tvg-ID="2685" tvg-name="HOT HBO FHD" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO FHD
+http://livego.club:8080/USERNAME/PASSWORD/41504
+
+#EXTINF:-1 tvg-ID="2685" tvg-name="HOT HBO HD" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO HD
+http://livego.club:8080/USERNAME/PASSWORD/6110
+
+#EXTINF:-1 tvg-ID="Zoom.[ZOOM].il" tvg-name="Zoom" tvg-logo="https://i.ibb.co/wwbxWvs/logo-zoom-CH-90-320-213.jpg" group-title="Israel: Kids",זום
+http://livego.club:8080/USERNAME/PASSWORD/8146
+
+#EXTINF:-1 tvg-ID="הופ!.[HOP].il" tvg-name="HOP" tvg-logo="https://i.ibb.co/Qpyj009/hop.jpg" group-title="Israel: Kids",הופ!
+http://livego.club:8080/USERNAME/PASSWORD/16062
+
+#EXTINF:-1 tvg-ID="ילדות.ישראלית.[HOP!.Childhood].il" tvg-name="HOP YALDUT" tvg-logo="https://i.ibb.co/2SrXnj9/hop-yaldot.png" group-title="Israel: Kids",הופ! ילדות ישראלית
+http://livego.club:8080/USERNAME/PASSWORD/6114
+
+#EXTINF:-1 tvg-ID="ילדות.ישראלית.[HOP!.Childhood].il" tvg-name="HOP YALDUT" tvg-logo="https://i.ibb.co/2SrXnj9/hop-yaldot.png" group-title="Israel: Kids",הופ! ילדות ישראלית
+http://livego.club:8080/USERNAME/PASSWORD/41501
+
+#EXTINF:-1 tvg-ID="דיסני.HD.[Disney.HD].il" tvg-name="Disney HD" tvg-logo="https://i.ibb.co/4jsBv7k/disney.png" group-title="Israel: Kids",דיסני
+http://livego.club:8080/USERNAME/PASSWORD/9574
+
+#EXTINF:-1 tvg-ID="דיסני.ג’וניור.[Disney.Junior].il" tvg-name="Disney Jr" tvg-logo="https://i.ibb.co/XsD3ymp/Disney-Junior.png" group-title="Israel: Kids",דיסני ג׳וניור
+http://livego.club:8080/USERNAME/PASSWORD/9575
+
+#EXTINF:-1 tvg-ID="ניקלודיאון.[Nickelodeon].il" tvg-name="Nickelodeon" tvg-logo="https://i.ibb.co/VBXfKwQ/Nick.png" group-title="Israel: Kids",ניקולודיאון
+http://livego.club:8080/USERNAME/PASSWORD/19515
+
+#EXTINF:-1 tvg-ID="ניק.ג’וניור.[NICK.Junior].il" tvg-name="Nick Jr" tvg-logo="https://i.ibb.co/1MfVYWd/nick-jr.png" group-title="Israel: Kids",ניק ג׳וניור
+http://livego.club:8080/USERNAME/PASSWORD/6113
+
+#EXTINF:-1 tvg-ID="ניק.ג’וניור.[NICK.Junior].il" tvg-name="Nick Jr" tvg-logo="https://i.ibb.co/1MfVYWd/nick-jr.png" group-title="Israel: Kids",ניק ג׳וניור
+http://livego.club:8080/USERNAME/PASSWORD/3340
+
+#EXTINF:-1 tvg-ID="Teennick.[TeenNick].il" tvg-name="NickTeen" tvg-logo="https://i.ibb.co/s1drdq5/TeenNick.png" group-title="Israel: Kids",ניק טין
+http://livego.club:8080/USERNAME/PASSWORD/6112
+
+#EXTINF:-1 tvg-ID="בייבי.[Baby].il" tvg-name="Baby TV" tvg-logo="https://i.ibb.co/0Zqt2Xm/Baby.png" group-title="Israel: Kids",בייבי
+http://livego.club:8080/USERNAME/PASSWORD/6111
+
+#EXTINF:-1 tvg-ID="ערוץ.WiZ.[WiZ].il" tvg-name="Yes Wiz" tvg-logo="https://i.imgur.com/LkVTjls.png" group-title="Israel: Kids",WIZ ערוץ
+http://livego.club:8080/USERNAME/PASSWORD/12035
+
+#EXTINF:-1 tvg-ID="2695" tvg-name="Luli" tvg-logo="https://i.ibb.co/swfmw5y/hot-luli.png" group-title="Israel: Kids",הוט לולי
+http://livego.club:8080/USERNAME/PASSWORD/12034
+
+#EXTINF:-1 tvg-ID="ג’וניור.[Junior].il" tvg-name="Junior" tvg-logo="https://i.ibb.co/sbRYqXS/junior.png" group-title="Israel: Kids",ג׳וניור
+http://livego.club:8080/USERNAME/PASSWORD/34679
+
+#EXTINF:-1 tvg-ID="ג’וניור.[Junior].il" tvg-name="Junior" tvg-logo="https://i.ibb.co/sbRYqXS/junior.png" group-title="Israel: Kids",ג׳וניור
+http://livego.club:8080/USERNAME/PASSWORD/8143
+
+#EXTINF:-1 tvg-ID="" tvg-name="Israel News HD" tvg-logo="https://i.ibb.co/YhsnQBp/n12-news.png" group-title="Israel: News",חדשות ערוץ 12
+http://livego.club:8080/USERNAME/PASSWORD/41078
+
+#EXTINF:-1 tvg-ID="FRANCE.24.[FRANCE.24].il" tvg-name="i 24" tvg-logo="https://i.ibb.co/cv5hXRc/FRANCE-24.png" group-title="Israel: News",i 24
+http://livego.club:8080/USERNAME/PASSWORD/12299
+
+#EXTINF:-1 tvg-ID="Fox.Business.Network.HDTV.(FBNHD).us" tvg-name="Fox Business HD" tvg-logo="https://i.ibb.co/Hr2DxRR/fox-business.png" group-title="Israel: News",פוקס ביזנס
+http://livego.club:8080/USERNAME/PASSWORD/42009
+
+#EXTINF:-1 tvg-id="ערוץ.24.החדש.[Music.24].il" tvg-logo="https://i.ibb.co/qnsM4P4/channel24.png" group-title="Israel: Music",ערוץ 24
+http://livego.club:8080/USERNAME/PASSWORD/41254
+
+#EXTINF:-1 tvg-id="ערוץ.24.החדש.[Music.24].il" tvg-logo="https://i.ibb.co/qnsM4P4/channel24.png" group-title="Israel: Music",ערוץ 24
+http://livego.club:8080/USERNAME/PASSWORD/3303
+
+#EXTINF:-1 tvg-ID="MTV.[MTV.(MTV.Music)].il" tvg-name="MTV Isreal" tvg-logo="https://i.ibb.co/RH6NqQL/logo-75-mtv-320x213.jpg" group-title="Israel: Music",MTV ישראל
+http://livego.club:8080/USERNAME/PASSWORD/9573
+
+#EXTINF:-1 tvg-ID="MTV.HITS.[MTV.HITS].il" tvg-name="MTV Hits" tvg-logo="https://i.ibb.co/yPVkj1g/MTV-HITS.png" group-title="Israel: Music",MTV להיטים
+http://livego.club:8080/USERNAME/PASSWORD/42010
+
+#EXTINF:-1 tvg-ID="MTV.00’s.[MTV.00s.(VH1)].il" tvg-name="MTV 00s" tvg-logo="https://i.ibb.co/DDBcQSH/MTV-00s.png" group-title="Israel: Music",MTV 00s
+http://livego.club:8080/USERNAME/PASSWORD/42007
+
+#EXTINF:-1 tvg-ID="MTV.80s.[MTV.80s.(VH1.Classic)].il" tvg-name="MTV 80s" tvg-logo="https://i.ibb.co/9b980nF/MTV-80s.png" group-title="Israel: Music",MTV 80s
+http://livego.club:8080/USERNAME/PASSWORD/42008
+
+#EXTINF:-1 tvg-ID="Animal.Planet.[ANIMAL.PLANET].il" tvg-name="Animal planet" tvg-logo="https://i.ibb.co/sgTDs8J/Animal-Planet.jpg" group-title="Israel: Nature & History",אנימל פלאנט
+http://livego.club:8080/USERNAME/PASSWORD/35323
+
+#EXTINF:-1 tvg-ID="National.Geographic.[National.G..HD].il" tvg-name="National Geographic HD" tvg-logo="https://i.ibb.co/XD09KpB/NG.png" group-title="Israel: Nature & History",נשיונל ג׳יאוגרפיק
+http://livego.club:8080/USERNAME/PASSWORD/40774
+
+#EXTINF:-1 tvg-ID="National.Geographic.[National.G..HD].il" tvg-name="National Geographic" tvg-logo="https://i.ibb.co/XD09KpB/NG.png" group-title="Israel: Nature & History",נשיונל ג׳יאוגרפיק
+http://livego.club:8080/USERNAME/PASSWORD/9571
+
+#EXTINF:-1 tvg-ID="NG.WILD.[National.G..Wild.HD].il" tvg-name="National Geo Wild HD" tvg-logo="https://i.ibb.co/RB5ZkV1/NG-Wild.png" group-title="Israel: Nature & History",נשיונל ג׳יאוגרפיק פראי
+http://livego.club:8080/USERNAME/PASSWORD/40775
+
+#EXTINF:-1 tvg-ID="NG.WILD.[National.G..Wild.HD].il" tvg-name="National Geo Wild" tvg-logo="https://i.ibb.co/RB5ZkV1/NG-Wild.png" group-title="Israel: Nature & History",נשיונל ג׳יאוגרפיק פראי
+http://livego.club:8080/USERNAME/PASSWORD/7344
+
+#EXTINF:-1 tvg-ID="NG.WILD.[National.G..Wild.HD].il" tvg-name="National Geo Wild" tvg-logo="https://i.ibb.co/RB5ZkV1/NG-Wild.png" group-title="Israel: Nature & History",נשיונל ג׳יאוגרפיק פראי
+http://livego.club:8080/USERNAME/PASSWORD/12586
+
+#EXTINF:-1 tvg-ID="דיסקברי.HD.[Discovery.HD].il" tvg-name="Discovery HD" tvg-logo="https://i.ibb.co/4SmfkJs/discovery.png" group-title="Israel: Nature & History",דיסקוברי
+http://livego.club:8080/USERNAME/PASSWORD/7342
+
+#EXTINF:-1 tvg-ID="Discovery.Science.[Discovery.Science].il" tvg-name="Discovery Science" tvg-logo="https://i.ibb.co/QHmX5Vf/discovery-SCIENCE.jpg" group-title="Israel: Nature & History",דיסקוברי מדע
+http://livego.club:8080/USERNAME/PASSWORD/41253
+
+#EXTINF:-1 tvg-ID="היסטוריה.HD.[History.HD].il" tvg-name="History HD" tvg-logo="https://i.ibb.co/6H7DBwp/history-HD-channel-320x213.jpg" group-title="Israel: Nature & History",HD היסטוריה
+http://livego.club:8080/USERNAME/PASSWORD/8142
+
+#EXTINF:-1 tvg-ID="ערוץ.ההיסטוריה.[History.SD].il" tvg-name="History" tvg-logo="https://i.ibb.co/xD1yz7v/history-channel-44-320x213.jpg" group-title="Israel: Nature & History",היסטוריה
+http://livego.club:8080/USERNAME/PASSWORD/22644
+
+#EXTINF:-1 tvg-ID="האח.הגדול.il" tvg-name="Big Brother 26 FHD" tvg-logo="https://i.ibb.co/XFYVMy0/Big-Brother.png" group-title="Israel: Docu & Reality",ערוץ האח הגדול
+http://livego.club:8080/USERNAME/PASSWORD/41078
+
+#EXTINF:-1 tvg-ID="האח.הגדול.il" tvg-name="Big Brother 26" tvg-logo="https://i.ibb.co/XFYVMy0/Big-Brother.png" group-title="Israel: Docu & Reality",ערוץ האח הגדול
+http://livego.club:8080/USERNAME/PASSWORD/17205
+
+#EXTINF:-1 tvg-ID="TLC.[TLC.(78)].il" tvg-name="TLC" tvg-logo="https://i.ibb.co/ZfLLsZ4/TLC.png" group-title="Israel: Docu & Reality",TLC
+http://livego.club:8080/USERNAME/PASSWORD/35322
+
+#EXTINF:-1 tvg-ID="CBS.reality.[CBS.Reality].il" tvg-name="CBS Reality" tvg-logo="https://i.ibb.co/9NgT7fq/CBSREALITY.png" group-title="Israel: Docu & Reality",CBS ריאליטי
+http://livego.club:8080/USERNAME/PASSWORD/14723
+
+#EXTINF:-1 tvg-ID="Investigation.Discovery.[IDXTRA].il" tvg-name="Investigation Discovery" tvg-logo="https://i.ibb.co/kmThcy3/ID.png" group-title="Israel: Docu & Reality",Investigation Discovery
+http://livego.club:8080/USERNAME/PASSWORD/63092
+
+#EXTINF:-1 tvg-ID="ערוץ.האוכל.[Food.Channel].il" tvg-name="Food Channel" tvg-logo="https://i.ibb.co/NrXJwwY/logo-haochel-320-213-2.jpg" group-title="Israel: Style Living",ערוץ האוכל
+http://livego.club:8080/USERNAME/PASSWORD/7341
+
+#EXTINF:-1 tvg-ID="Food.Network.HD.-.EN.pl" tvg-name="Food Network HD" tvg-logo="https://i.ibb.co/jTZj08R/Food-Network.png" group-title="Israel: Style Living",רשת האוכל
+http://livego.club:8080/USERNAME/PASSWORD/22645
+
+#EXTINF:-1 tvg-ID="בית+.[Home.and.Family].il" tvg-name="Home Plus" tvg-logo="https://i.ibb.co/Y457rbX/home-plus.png" group-title="Israel: Style Living",בית+
+http://livego.club:8080/USERNAME/PASSWORD/6103
+
+#EXTINF:-1 tvg-ID="Fine.Living.al" tvg-name="Fine Living" tvg-logo="https://i.ibb.co/j5LnKns/Fine-Living.png" group-title="Israel: Style Living",חיים טוב
+http://livego.club:8080/USERNAME/PASSWORD/12029
+
+#EXTINF:-1 tvg-ID="החיים.הטובים.[LifeStyle].il" tvg-name="GoodLife" tvg-logo="https://i.ibb.co/kGxjwD9/logo-hachaim-hatovim-320-213.jpg" group-title="Israel: Style Living",ערוץ החיים הטובים
+http://livego.club:8080/USERNAME/PASSWORD/16283
+
+#EXTINF:-1 tvg-ID="ערוץ.בריאות.[Health.Channel].il" tvg-name="Health Channel" tvg-logo="https://i.ibb.co/R6VyBJR/logo-health.jpg" group-title="Israel: Style Living",ערוץ הבריאות
+http://livego.club:8080/USERNAME/PASSWORD/12032
+
+#EXTINF:-1 tvg-ID="ערוץ.הסטייל.[Style.Channel.(Fashion.IL)].il" tvg-name="Style Channel" tvg-logo="https://i.ibb.co/mbVccjX/logo-channel38-320-X213.jpg" group-title="Israel: Style Living",ערוץ הסטייל
+http://livego.club:8080/USERNAME/PASSWORD/23716
+
+#EXTINF:-1 tvg-ID="FTV.[FTV].il" tvg-name="Fashion Isreal HD" tvg-logo="https://i.ibb.co/b5yqGpJ/Fashion-TV.png" group-title="Israel: Style Living",ערוץ האופנה
+http://livego.club:8080/USERNAME/PASSWORD/41252
+
+#EXTINF:-1 tvg-ID="E!.[E].il" tvg-name="E! Entertainment" tvg-logo="https://i.ibb.co/ChbC9X6/E.png" group-title="Israel: Style Living",E! בידור
+http://livego.club:8080/USERNAME/PASSWORD/14639
+
+#EXTINF:-1 tvg-ID="ערוץ.אגו.[EGO].il" tvg-name="Ego Channel" tvg-logo="https://i.ibb.co/87FpHXN/Ego.jpg" group-title="Israel: Style Living",ערוץ אגו
+http://livego.club:8080/USERNAME/PASSWORD/12586
+
+#EXTINF:-1 tvg-ID="ערוץ.הטיולים.[Travel.Channel].il" tvg-name="Travel Channel" tvg-logo="https://i.ibb.co/QFFtf2H/logo-hatiyulim-320-213.jpg" group-title="Israel: Style Living",ערוץ הטיולים
+http://livego.club:8080/USERNAME/PASSWORD/25824
+
+#EXTINF:-1 tvg-ID="Travel.Channel.HDTV.(East).(TRAVD).us" tvg-name="Travel Channel" tvg-logo="https://i.ibb.co/LkrRJqk/Travel-Channel.png" group-title="Israel: Style Living",ערוץ הטיולים
+http://livego.club:8080/USERNAME/PASSWORD/7340
+
+#EXTINF:-1 tvg-ID="LIFETIME.ph" tvg-name="Lifetime" tvg-logo="https://i.ibb.co/PjVBMqk/mylifetime.png" group-title="Israel: Style Living",לייפטיים
+http://livego.club:8080/USERNAME/PASSWORD/12030
+
+#EXTINF:-1 tvg-ID="ערוץ.הקניות.[Shopping.Channel.(Channel.21)].il" tvg-name="Israel Shopping Channel" tvg-logo="https://i.ibb.co/pXpQNsm/Shopping-Channel.png" group-title="Israel: Style Living",ערוץ הקניות
+http://livego.club:8080/USERNAME/PASSWORD/19513
+
+#EXTINF:-1 tvg-id="ישראל.פלוס.[Israel.Plus.(9)].il" tvg-logo="https://i.ibb.co/NnCWHX4/Channel9.png" group-title="Israel: Foreign Languages",ערוץ 9
+http://livego.club:8080/USERNAME/PASSWORD/40334
+
+#EXTINF:-1 tvg-id="ישראל.פלוס.[Israel.Plus.(9)].il" tvg-logo="https://i.ibb.co/NnCWHX4/Channel9.png" group-title="Israel: Foreign Languages",ערוץ 9
+http://livego.club:8080/USERNAME/PASSWORD/6105
+
+#EXTINF:-1 tvg-ID="MeTV.KSAT-DT2.us" tvg-name="MeTV" tvg-logo="https://i.ibb.co/5c8sXKJ/MeTV.png" group-title="Israel: Foreign Languages",MeTV
+http://livego.club:8080/USERNAME/PASSWORD/23122
+
+#EXTINF:-1 tvg-id="ים.תיכוני.[Mediterranean.Channel].il" tvg-logo="https://i.ibb.co/Y3bmhjy/Yam-Tihoni.png" group-title="Israel: Foreign Languages",הערוץ הים תיכוני
+http://livego.club:8080/USERNAME/PASSWORD/12031
+
+#EXTINF:-1 tvg-id="מכאן.[Makan].il" tvg-logo="https://i.ibb.co/hy0jCDJ/Makan.jpg" group-title="Israel: Foreign Languages",מכאן 33
+http://livego.club:8080/USERNAME/PASSWORD/40335
+
+#EXTINF:-1 tvg-id="מכאן.[Makan].il" tvg-logo="https://i.ibb.co/hy0jCDJ/Makan.jpg" group-title="Israel: Foreign Languages",מכאן 33
+http://livego.club:8080/USERNAME/PASSWORD/18132
+
+#EXTINF:-1 tvg-ID="Hala.TV.[HALA.TV].il" tvg-name="Hala TV FHD" tvg-logo="https://i.ibb.co/cwQk3qy/Hala.png" group-title="Israel: Foreign Languages",ערוץ האלא
+http://livego.club:8080/USERNAME/PASSWORD/19381
+
+#EXTINF:-1 tvg-ID="ויוה.[Viva].il" tvg-name="VIVA" tvg-logo="https://i.ibb.co/9nr0S6k/Viva.png" group-title="Israel: Foreign Languages",ויוה
+http://livego.club:8080/USERNAME/PASSWORD/14531
+
+#EXTINF:-1 tvg-ID="ויוה+.[Viva.Plus].il" tvg-name="VIVA Plus" tvg-logo="https://i.ibb.co/B6tX7Gn/VivaPlus.png" group-title="Israel: Foreign Languages",ויוה+
+http://livego.club:8080/USERNAME/PASSWORD/6101
+
+#EXTINF:-1 tvg-ID="ערוץ.הדרמות.הטורקיות+.[Turkish.Drama].il" tvg-name="Turkish Dramas Plus FHD" tvg-logo="https://i.ibb.co/HP69B5r/turkish-drama-plus.png" group-title="Israel: Foreign Languages",ערוץ הדרמות הטורקיות+
+http://livego.club:8080/USERNAME/PASSWORD/34819
+
+#EXTINF:-1 tvg-ID="ערוץ.הדרמות.הטורקיות.2.[Turkish.Drama.2].il" tvg-name="Turkish Dramas 2" tvg-logo="https://i.ibb.co/FBd1MjF/turkish-drama-2.png" group-title="Israel: Foreign Languages",ערוץ הדרמות הטורקיות 2
+http://livego.club:8080/USERNAME/PASSWORD/45726
+
+#EXTINF:-1 tvg-ID="5071" tvg-name="HOT Bollywood HD" tvg-logo="https://i.ibb.co/pyDNKw1/hot-Bollywood.png" group-title="Israel: Foreign Languages",הוט בוליווד
+http://livego.club:8080/USERNAME/PASSWORD/62379
+
+#EXTINF:-1 tvg-ID="yesBollywood.[Bollywood].il" tvg-name="YES Bollywood SD" tvg-logo="https://i.ibb.co/LP0Nc1d/yes-Bollywoo-D.png" group-title="Israel: Foreign Languages",יס בוליווד
+http://livego.club:8080/USERNAME/PASSWORD/20368
+        </code>
+        </pre>
+        
+      </form>
+      <br><br><br>
+      <p>
+        <h3>Disclaimer!</h3>
+        This service is only provided at no charge to help the community simplify and enhance the DATOO service. I am not an IPTV provider! You will still need to purchase a DATOO IPTV service and to provide your USERNAME & PASSWORD for the Playlist to work. Refer to the current group recommendation for a reliable DATOO provider.
+      </p>
+</body>
+
+</html>
