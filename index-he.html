@@ -103,7 +103,7 @@
     <br><br>
     <h2 class="hebh2">הוראות שימוש באשף</h2>
     
-    <p class="hebp">ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך.</p>
+    <p class="hebp">ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך</p>
     <form onsubmit="download('DikoPlus.m3u', this); return false;">
         <input type="user" name="user" id="user" placeholder="שם משתמש" required>
         <input type="password" name="password" id="password" placeholder="סיסמה" required>
@@ -697,7 +697,7 @@ http://livego.club:8080/USERNAME/PASSWORD/20368
         This service is only provided at no charge to help the community simplify and enhance the DATOO service. I am not an IPTV provider! You will still need to purchase a DATOO IPTV service and to provide your USERNAME & PASSWORD for the Playlist to work. Refer to the current group recommendation for a reliable DATOO provider.
       </p>
 
-/* Script to automate tabs view */
+
 <script>
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -712,6 +712,34 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+</script>
+
+<script>
+    const input = document.querySelector('input[name="user"]');
+
+    input.addEventListener('invalid', function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity('הקלד את שם המשתמש שקיבלת מספק השירות שלך');
+      }
+    })
+
+    input.addEventListener('change', function (event) {
+      event.target.setCustomValidity('');
+    })
+</script>
+
+<script>
+    const input = document.querySelector('input[name="password"]');
+
+    input.addEventListener('invalid', function (event) {
+      if (event.target.validity.valueMissing) {
+        event.target.setCustomValidity('הקלד את הסיסמה שקיבלת מספק השירות שלך');
+      }
+    })
+
+    input.addEventListener('change', function (event) {
+      event.target.setCustomValidity('');
+    })
 </script>
 
 </body>
