@@ -33,6 +33,44 @@
         H2.hebh2 { text-align: right}
         H3.hebh3 { text-align: right}
         P.hebp { text-align: right}
+        
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+        
      </STYLE>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
@@ -47,16 +85,24 @@
           <li>מכיוון שאינני ספק שירות אלא משתמש בשירותי פלייליסט של ספקי דאטו/לייבגו,יכול להיווצר לעיתים חוסר התאמה בין הערוץ המשודר בפועל לשמו בפלייליסט הזה. זה אמנם נדיר, אבל יכול לקרות. אני דואג לעדכן את הקובץ בתכיפות בהתאם ולכן כדי לבדוק את תאריך העדכון האחרון (למעלה) לעומת הפעם האחרנה שבה יצרתם את הקובץ במקור על מנת לייצר חדש אם יש צורך.</li>
           <li>הדף הזה הינו דף סטטי שמייצר את הקובץ בצורה מקומית בזיכרון המחשב שממנו אתה מחובר לאתר זה. אתם מוזמנים לבחון את קוד הדף בעצמכם על מנת לאמת זאת (לינק למטה). אין לי שום צורך או אינטרס בשם המשתמש והסיסמה שלכם. יצרתי את השירות הזה כשירות לקהילה.</li>
           <li>בדיוק בגלל הסיבה שנאמרה מעל, לצערי אין אפשרות כרגע לתמוך ביצירה והורדה של הקובץ ישירות דרך דפדפן במכשיר האנדרויד טיוי. הינכם צריכים לייצר את הקובץ באשף זה ממחשב ולהעביר אותו לסטרימר שלכם כדי לטעון אותו לנגן ה-IPTV.</li>
-          <li>לצערי, אין כרגע ספק לוח שידורים אחד שהינו יציב ומקיף את כל הערוצים. אני הצלחתי לייצר קובץ שכולל כמעט את כל הערוצים עם ספק לוח שידורים אלקטרוני אחד. קיימת אפשרות להוסיף יותר מספק לוח שידורים אחד על מנת לקבל לוח כמעט מלא לחלוטין. אני עדיין עובד אם ספק לוח השידורים כדי להכיל את הכל ברשימה אחת.</li>
+          <li>לצערי, אין כרגע ספק לוח שידורים אחד שהינו יציב ומקיף את כל הערוצים. אני הצלחתי לייצר קובץ שכולל כמעט את כל הערוצים עם ספק לוח שידורים אלקטרוני אחד. קיימת אפשרות להוסיף יותר מספק לוח שידורים אחד על מנת לקבל לוח כמעט מלא לחלוטין. אפשרות זאת נתמכת על ידי הנגנים טיוימייט וטלויזו. אני עדיין עובד אם ספק לוח השידורים כדי להכיל את הכל ברשימה אחת.</li>
           <li>אם בכל זאת קיים לכם חשש מלספק את שם המשתמש והסיסמה שחכם לאשף, אני בהחלט מבין זאת, ולכן אני מאפשר לכם גישה לצפייה בתוכן הקובץ ישירות <a href="https://raw.githubusercontent.com/dikodahan/dikodahan.github.io/master/DikoPlus.m3u">כאן</a>. קחו בחשבון שתצטרכו לבצע את החלפת שם המשתמש והסיסמה באופן ידני במקרה הזה.</li>
         </ul>
     </p>
     <br><br>
-    <h2>Setup instructions</h2>
-    <p>
-        <ul>
-          <h3>If Tivimate is your prefered IPTV player, you will need to follow the following steps:</h3>
-          <li>Add your Datoo/LiveGo service to Tivimate via Xtream Codes option in the "Add Playlist" option. This will add the service with everything in it as is.</li>
+    <h2 class="hebh2">הוראות שימוש באשף</h2>
+    <p class="hebp">בחר את נגן ה-IPTV שלך</p>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Tivimate')">Tivimate</button>
+      <button class="tablinks" onclick="openCity(event, 'Televizo')">Televizo</button>
+      <button class="tablinks" onclick="openCity(event, 'IPTV-Smarters')">IPTV Smarters</button>
+    </div>
+    
+    <div id="Tivimate" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
           <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
           <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
           <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
@@ -76,16 +122,77 @@
               <ol>
                   <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
               </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
           </ul>
-          <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
-      </ul>
-      </p><br><br>
-    <h2>Enter the username and password you received from your IPTV provider.</h2>
-    <small>* The data is not saved anywhere. <a href="https://github.com/dikodahan/dikodahan.github.io/blob/master/index.html">Feel free to view the source code to check for yourself!</a></small><br>
+        </p>
+      </div><br><br>
+
+    <div id="Televizo" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+          </ul>
+        </p>
+      </div><br><br>
+
+    <div id="IPTV-Smarters" class="tabcontent">
+      <p class="hebp">
+        <ul dir="rtl">
+          <h3>עקוב אחר הצעדים הבאים:</h3>
+          <li>הוסף את שירות דאטו/לייבגו באופן רגיל, ללא קשר לפלייליסט הזה. השירות נותן לך גישה לכל התכנים הנוספים של שירות זה.</li>
+          <li>Provide your USERNAME & PASSWORD in the form here to download your updated copy of M3U file.</li>
+          <li>Transfer the M3U file from your computer to your Android TV device (plenty of guides on how to do it are available online).</li>
+          <li>Within TiviMate, go to: Settings > EPG > EPG sources > Add source > Enter URL</li>
+          <li>Type the following URL: <code>https://bit.ly/it999ru</code> and complete the EPG addition.</li>
+            <ol>
+              <li>This will add the it999.ru EPG source so we can add it to the playlist. HOT channels are not supported by the updated playlist I am using so when this service goes back online, if mapped to the playlist, it will automatically load the EPG for those channels.</li>
+            </ol>
+          <li>Go to: Settings > Playlists > Add playlist > M3U playlist > Select local playlist > Internal shared storage > [navigate to the M3U file location on your device and select it] > complete the addition of the playlist by simply approving the defaults.</li>
+          <li>After being added, you will not see the <b>DikoPlus</b> listed on your playlists.</li>
+          <li>Go into the DikoPlus playlist > EPG sources > [make sure the following EPG sources are now enabled for this playlist]:</li>
+          <ul>
+              <li><code>github.com</code> - should be enabled by default.</li>
+              <ol>
+                  <li>This is added automatically by the M3U playlist and most of the channels pull their EPG from it.</li>
+              </ol>
+              <li><code>bit.ly</code> - enable for this playlist (this is the one we added earlier).</li>
+              <ol>
+                  <li>As stated previously, this is the it999.ry EPG source. only here for HOT and a couple more channels.</li>
+              </ol>
+              </ul>
+              <li>Please note that after the first time of adding the playlist and adding the EPG sources to it, it will take a few minutes to complete updating all the TV guide listings.</li>
+          </ul>
+        </p>
+      </div><br><br>
+    
+    <h2 class="hebh2">ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך.</h2>
     <form onsubmit="download('DikoPlus.m3u', this); return false;">
         <input type="user" name="user" id="user" placeholder="username" required>
         <input type="password" name="password" id="password" placeholder="password" required>
-        <input type="submit" value="Download">
+        <input type="submit" value="הורדה">
         <pre readonly style="display: none;">
             <code id="text">
 #EXTM3U url-tvg="https://github.com/epgshare01/share01/raw/master/epg_ripper_ALL_SOURCES1.xml.gz"
@@ -576,6 +683,24 @@ http://livego.club:8080/USERNAME/PASSWORD/20368
         <h3>Disclaimer!</h3>
         This service is only provided at no charge to help the community simplify and enhance the DATOO service. I am not an IPTV provider! You will still need to purchase a DATOO IPTV service and to provide your USERNAME & PASSWORD for the Playlist to work. Refer to the current group recommendation for a reliable DATOO provider.
       </p>
+
+/* Script to automate tabs view */
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
 </body>
 
 </html>
