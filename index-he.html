@@ -103,10 +103,10 @@
     <br><br>
     <h2 class="hebh2">הוראות שימוש באשף</h2>
     
-    <p class="hebp">.ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלךבטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך</p>
+    <p class="hebp">.ספק את שם המשתמש והסיסמה שניתנו לך מספק הדאטו/לייבגו שלך בטופס זה ולחץ על כפתור ההורדה לשמירת קובץ מותאם אישית עבורך</p>
     <form onsubmit="download('DikoPlus.m3u', this); return false;">
-        <input type="user" name="user" id="user" placeholder="שם משתמש" required>
-        <input type="password" name="password" id="password" placeholder="סיסמה" required>
+        <input type="user" name="user" id="user" placeholder="שם משתמש" required title="הקלד את שם המשתמש שקיבלת מהספק שלך">
+        <input type="password" name="password" id="password" placeholder="סיסמה" required title="הקלד את הסיסמה שקיבלת מהספק שלך">
         <input type="submit" value="הורדה">
         <pre readonly style="display: none;">
             <code id="text">
@@ -682,21 +682,6 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-</script>
-
-<script>
-    const input = document.querySelectorAll('input[name="user"][name="password"]');
-
-    input.addEventListener('invalid', function (event) {
-      if (event.target.validity.valueMissing) {
-        event.target.setCustomValidity('הקלד את הפרטים שקיבלת מספק השירות שלך');
-      } else if {
-          
-    })
-
-    input.addEventListener('change', function (event) {
-      event.target.setCustomValidity('');
-    })
 </script>
 
 
