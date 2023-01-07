@@ -598,7 +598,6 @@ http://livego.club:8080/USERNAME/PASSWORD/20368
     <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'Tivimate')">Tivimate</button>
       <button class="tablinks" onclick="openCity(event, 'Televizo')">Televizo</button>
-      <button class="tablinks" onclick="openCity(event, 'IPTV-Smarters')">IPTV Smarters</button>
     </div>
     
     <div id="Tivimate" class="tabcontent">
@@ -686,7 +685,7 @@ function openCity(evt, cityName) {
 </script>
 
 <script>
-    const input = document.querySelectorAll('input[name="user"], input[name="password"]');
+    const input = document.querySelectorAll('input[name="user"][name="password"]');
 
     input.addEventListener('invalid', function (event) {
       if (event.target.validity.valueMissing) {
