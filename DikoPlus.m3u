@@ -442,10 +442,10 @@ http://livego.club:8080/USERNAME/PASSWORD/40334
 #EXTINF:-1 tvg-ID="MeTV.KSAT-DT2.us" tvg-name="MeTV" tvg-logo="https://i.ibb.co/5c8sXKJ/MeTV.png" group-title="Israel: Foreign Languages",MeTV HD
 http://livego.club:8080/USERNAME/PASSWORD/23122
 
-#EXTINF:-1 tvg-ID="Fox.Business.Network.HDTV.(FBNHD).us" tvg-name="Fox Business HD" tvg-logo="https://i.ibb.co/Hr2DxRR/fox-business.png" group-title="Israel: oreign Languages",SD פוקס ביזנס
+#EXTINF:-1 tvg-ID="Fox.Business.Network.HDTV.(FBNHD).us" tvg-name="Fox Business HD" tvg-logo="https://i.ibb.co/Hr2DxRR/fox-business.png" group-title="Israel: Foreign Languages",SD פוקס ביזנס
 http://livego.club:8080/USERNAME/PASSWORD/42009
 
-#EXTINF:-1 tvg-ID="FRANCE.24.[FRANCE.24].il" tvg-name="i 24" tvg-logo="https://i.ibb.co/cv5hXRc/FRANCE-24.png" group-title="Israel: oreign Languages",i 24 FHD
+#EXTINF:-1 tvg-ID="FRANCE.24.[FRANCE.24].il" tvg-name="i 24" tvg-logo="https://i.ibb.co/cv5hXRc/FRANCE-24.png" group-title="Israel: Foreign Languages",i 24 FHD
 http://livego.club:8080/USERNAME/PASSWORD/12299
 
 #EXTINF:-1 tvg-id="ים.תיכוני.[Mediterranean.Channel].il" tvg-logo="https://i.ibb.co/Y3bmhjy/Yam-Tihoni.png" group-title="Israel: Foreign Languages",SD הערוץ הים תיכוני
