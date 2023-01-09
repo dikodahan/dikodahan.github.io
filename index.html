@@ -33,6 +33,7 @@
         H2.hebh2 { text-align: right}
         H3.hebh3 { text-align: right}
         P.hebp { text-align: right}
+        DIV.hebdiv { text-align: right}
         
         /* Bullets padding */
         ul li { 
@@ -94,6 +95,32 @@
         input {
           display: block;
           direction: ltr;
+        }
+        
+        /* FAQ Accordion styling */
+        .accordion {
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: right;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+          background-color: #ccc; 
+        }
+
+        .panel {
+          padding: 0 18px;
+          display: none;
+          background-color: white;
+          overflow: hidden;
+          text-align: right;
         }
         
      </STYLE>
@@ -764,6 +791,31 @@ http://livego.club:8080/USERNAME/PASSWORD/20368
       </p>
     </div>
 
+<br>
+    <div class="hebdiv">
+        <h3 class="hebh3">שאלות ותשובות נפוצות!</h3>
+        <button class="accordion">מדוע יש צורך בכלל במדריך הזה?</button>
+          <div class="panel">
+            <p>רוב הספקים אינם מספקים לוח שידורים מסודר עבור הערוצים הישראלים ואפילו לא לוגואים לרוב הערותים. מטרת המדריך הזה לאפשר חווית משתמש דומה ככל האפשר לחבילת כבלים מלאה</p>
+          </div>
+        
+        <button class="accordion">?מדוע מופיעים לי פחות ערוצים בפלייליסט מאשר במקור </button>
+          <div class="panel">
+            <p>ספק השירות לעיתים מוסיף ערוצים שאינם שייכים למדינה הרלוונטית. בפלייליסט אני דואג לנקות אותם מהרשימה</p>
+          </div>
+
+        <button class="accordion">מהם הקישורים המקוצרים שבמדריך?</button>
+          <div class="panel">
+            <p>מכיוון שצריכים לספק מספר כתובות שבמקור הן מאד ארוכות, יצרתי קישורים מקוצרים כדי לחסוך הקלדות ארוכות עם השלט</p>
+          </div>
+
+        <button class="accordion">מדוע אין ספק לוח שידורים אחד שמספק את כל הערוצים?</button>
+          <div class="panel">
+            <p>מכיוון שאלו אנשים פרטיים שתורמים מזמנם הפרטי ולוקח זמן לייצר זאת. אם זאת, אני עובד על זה</p>
+        </div>
+    </div>
+
+
 
       <br><br><br>
       <h3 class="hebh3">!הצהרת אי אחריות</h3>
@@ -783,6 +835,24 @@ function openCity(evt, cityName) {
   }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+</script>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 
