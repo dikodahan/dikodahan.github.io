@@ -1,32 +1,37 @@
-{ 
-  "SD כאן 11" : {
+[
+  {
+    "name"            : "SD כאן 11",
     "tvg-id"          : "כאן.11.[Kan.HD].il",
     "tvg-logo"        : "https://i.imgur.com/1lJWCuQ.png",
     "group-title"     : "Israel: Main Channels",
     "channel-id"      : 18131
   },
-  "FHD קשת 12" : {
+  {
+    "name"            : "FHD קשת 12",
     "tvg-id"          : "קשת.[Keshet.HD].il",
     "tvg-logo"        : "https://i.ibb.co/b3zb05L/12-Keshet.png",
     "group-title"     : "Israel: Main Channels",
     "channel-id"      : 19374
   },
-  "FHD רשת 13" : {
+  {
+    "name"            : "FHD רשת 13",
     "tvg-id"          : "רשת.[Reshet.HD].il",
     "tvg-logo"        : "https://i.ibb.co/vZnz4w9/Channel13.png",
     "group-title"     : "Israel: Main Channels",
     "channel-id"      : 19375
   },
-  "HD ערוץ 14" : {
+  {
+    "name"            : "HD ערוץ 14",
     "tvg-id"          : "ערוץ.14.[Channel.14.(Channel.20).HD].il",
     "tvg-logo"        : "https://i.imgur.com/t9nSWSV.png",
     "group-title"     : "Israel: Main Channels",
     "channel-id"      : 61503
   },
-  "ONE 1 FHD" : {
+  {
+    "name"            : "ONE 1 FHD",
     "tvg-id"          : "ONE.[ONE.HD].il",
     "tvg-logo"        : "https://i.ibb.co/Hqky1H5/ONE-sport.png",
     "group-title"     : "Israel: Sports",
     "channel-id"      : 21903
   }
-}
+]
