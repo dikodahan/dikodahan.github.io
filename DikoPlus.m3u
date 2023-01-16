@@ -232,55 +232,55 @@ http://livego.club:8080/USERNAME/PASSWORD/25834
 #EXTINF:-1 tvg-ID="yes.דוקו.[yes.Docu.HD].il" tvg-logo="https://i.ibb.co/YZ6wNhv/yes-DOCO.png" group-title="Israel: YES",YES FHD דוקו
 http://livego.club:8080/USERNAME/PASSWORD/25832
 
-#EXTINF:-1 tvg-id="ערוץ.3.il" tvg-logo="https://i.ibb.co/Cmq24Hf/HOT-3.png" group-title="Israel: HOT",SD הוט 3
+#EXTINF:-1 tvg-id="hot3-hd-il" tvg-logo="https://i.ibb.co/Cmq24Hf/HOT-3.png" group-title="Israel: HOT",SD הוט 3
 http://livego.club:8080/USERNAME/PASSWORD/6106
 
-#EXTINF:-1 tvg-id="ערוץ.8.il" tvg-logo="https://i.ibb.co/kGg4c26/HOT-8.png" group-title="Israel: HOT",SD הוט 8
+#EXTINF:-1 tvg-id="hot-8-il-hd" tvg-logo="https://i.ibb.co/kGg4c26/HOT-8.png" group-title="Israel: HOT",SD הוט 8
 http://livego.club:8080/USERNAME/PASSWORD/8141
 
-#EXTINF:-1 tvg-ID="2691" tvg-logo="https://i.ibb.co/3CrKZpP/HOT-Zone.png" group-title="Israel: HOT",SD הוט זון
+#EXTINF:-1 tvg-ID="hot-zone-hd-il" tvg-logo="https://i.ibb.co/3CrKZpP/HOT-Zone.png" group-title="Israel: HOT",SD הוט זון
 http://livego.club:8080/USERNAME/PASSWORD/6107
 
-#EXTINF:-1 tvg-ID="5024" tvg-logo="https://i.ibb.co/HDVknX5/HOT-Comedy-Central.png" group-title="Israel: HOT",SD הוט קומדי סנטרל
+#EXTINF:-1 tvg-ID="hot-comedy-central-il-hd" tvg-logo="https://i.ibb.co/HDVknX5/HOT-Comedy-Central.png" group-title="Israel: HOT",SD הוט קומדי סנטרל
 http://livego.club:8080/USERNAME/PASSWORD/6104
 
-#EXTINF:-1 tvg-ID="הוט.בידור.ישראלי.il" tvg-logo="https://i.ibb.co/5jcfbhy/HOT-Bidur.png" group-title="Israel: HOT",SD הוט בידור ישראלי
+#EXTINF:-1 tvg-ID="entertainment-il" tvg-logo="https://i.ibb.co/5jcfbhy/HOT-Bidur.png" group-title="Israel: HOT",SD הוט בידור ישראלי
 http://livego.club:8080/USERNAME/PASSWORD/6102
 
-#EXTINF:-1 tvg-id="2688" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",SD הוט סינמה 1
+#EXTINF:-1 tvg-id="hot-cinema1-il" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",SD הוט סינמה 1
 http://livego.club:8080/USERNAME/PASSWORD/23802
 
-#EXTINF:-1 tvg-id="2688" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",SD הוט סינמה 1
+#EXTINF:-1 tvg-id="hot-cinema1-il" tvg-logo="https://i.ibb.co/ZWLdg0b/HOT-C1.png" group-title="Israel: HOT",SD הוט סינמה 1
 http://livego.club:8080/USERNAME/PASSWORD/6108
 
-#EXTINF:-1 tvg-ID="2702" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",SD הוט סינמה 2
+#EXTINF:-1 tvg-ID="hot-cinema2-il" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",SD הוט סינמה 2
 http://livego.club:8080/USERNAME/PASSWORD/25821
 
-#EXTINF:-1 tvg-ID="2702" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",SD הוט סינמה 2
+#EXTINF:-1 tvg-ID="hot-cinema2-il" tvg-logo="https://i.ibb.co/bsDpWgX/HOT-C2.png" group-title="Israel: HOT",SD הוט סינמה 2
 http://livego.club:8080/USERNAME/PASSWORD/5960
 
-#EXTINF:-1 tvg-ID="2703" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
+#EXTINF:-1 tvg-ID="hot-cinema3-il" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
 http://livego.club:8080/USERNAME/PASSWORD/64397
 
-#EXTINF:-1 tvg-ID="2703" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
+#EXTINF:-1 tvg-ID="hot-cinema3-il" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
 http://livego.club:8080/USERNAME/PASSWORD/25822
 
-#EXTINF:-1 tvg-ID="2703" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
+#EXTINF:-1 tvg-ID="hot-cinema3-il" tvg-logo="https://i.ibb.co/vJX7LhD/HOT-C3.png" group-title="Israel: HOT",SD הוט סינמה 3
 http://livego.club:8080/USERNAME/PASSWORD/5961
 
-#EXTINF:-1 tvg-ID="2687" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
+#EXTINF:-1 tvg-ID="hot-cinema4-il" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
 http://livego.club:8080/USERNAME/PASSWORD/64339
 
-#EXTINF:-1 tvg-ID="2687" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
+#EXTINF:-1 tvg-ID="hot-cinema4-il" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
 http://livego.club:8080/USERNAME/PASSWORD/25823
 
-#EXTINF:-1 tvg-ID="2687" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
+#EXTINF:-1 tvg-ID="hot-cinema4-il" tvg-logo="https://i.ibb.co/KNfwwwJ/HOT-C4.png" group-title="Israel: HOT",SD הוט סינמה 4
 http://livego.club:8080/USERNAME/PASSWORD/6109
 
-#EXTINF:-1 tvg-ID="2685" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO HD
+#EXTINF:-1 tvg-ID="hot-hbo-il" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO HD
 http://livego.club:8080/USERNAME/PASSWORD/41504
 
-#EXTINF:-1 tvg-ID="2685" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO HD
+#EXTINF:-1 tvg-ID="hot-hbo-il" tvg-logo="https://i.ibb.co/nQZKTYH/HOT-HBO.png" group-title="Israel: HOT",HOT HBO HD
 http://livego.club:8080/USERNAME/PASSWORD/6110
 
 #EXTINF:-1 tvg-ID="Zoom.[ZOOM].il" tvg-logo="https://i.ibb.co/wwbxWvs/logo-zoom-CH-90-320-213.jpg" group-title="Israel: Kids",SD זום
@@ -319,7 +319,7 @@ http://livego.club:8080/USERNAME/PASSWORD/6111
 #EXTINF:-1 tvg-ID="ערוץ.WiZ.[WiZ].il" tvg-logo="https://i.imgur.com/LkVTjls.png" group-title="Israel: Kids",SD ערוץ וויז
 http://livego.club:8080/USERNAME/PASSWORD/12035
 
-#EXTINF:-1 tvg-ID="2695" tvg-logo="https://i.ibb.co/swfmw5y/hot-luli.png" group-title="Israel: Kids",SD הוט לולי
+#EXTINF:-1 tvg-ID="luli-il" tvg-logo="https://i.ibb.co/swfmw5y/hot-luli.png" group-title="Israel: Kids",SD הוט לולי
 http://livego.club:8080/USERNAME/PASSWORD/12034
 
 #EXTINF:-1 tvg-ID="ג’וניור.[Junior].il" tvg-logo="https://i.ibb.co/sbRYqXS/junior.png" group-title="Israel: Kids",SD ג׳וניור
@@ -394,7 +394,7 @@ http://livego.club:8080/USERNAME/PASSWORD/63092
 #EXTINF:-1 tvg-ID="ערוץ.האוכל.[Food.Channel].il" tvg-logo="https://i.ibb.co/NrXJwwY/logo-haochel-320-213-2.jpg" group-title="Israel: Style Living",SD ערוץ האוכל
 http://livego.club:8080/USERNAME/PASSWORD/7341
 
-#EXTINF:-1 tvg-ID="Food.Network.HD.-.EN.pl" tvg-logo="https://i.ibb.co/jTZj08R/Food-Network.png" group-title="Israel: Style Living",HD רשת האוכל
+#EXTINF:-1 tvg-ID="food-network-il" tvg-logo="https://i.ibb.co/jTZj08R/Food-Network.png" group-title="Israel: Style Living",HD רשת האוכל
 http://livego.club:8080/USERNAME/PASSWORD/22645
 
 #EXTINF:-1 tvg-ID="בית+.[Home.and.Family].il" tvg-logo="https://i.ibb.co/Y457rbX/home-plus.png" group-title="Israel: Style Living",SD בית+
@@ -424,7 +424,7 @@ http://livego.club:8080/USERNAME/PASSWORD/12586
 #EXTINF:-1 tvg-ID="ערוץ.הטיולים.[Travel.Channel].il" tvg-logo="https://i.ibb.co/QFFtf2H/logo-hatiyulim-320-213.jpg" group-title="Israel: Style Living",SD ערוץ הטיולים
 http://livego.club:8080/USERNAME/PASSWORD/25824
 
-#EXTINF:-1 tvg-ID="Travel.Channel.HDTV.(East).(TRAVD).us" tvg-logo="https://i.ibb.co/LkrRJqk/Travel-Channel.png" group-title="Israel: Style Living",SD ערוץ הטיולים
+#EXTINF:-1 tvg-ID="travel-channel-il" tvg-logo="https://i.ibb.co/LkrRJqk/Travel-Channel.png" group-title="Israel: Style Living",SD ערוץ הטיולים
 http://livego.club:8080/USERNAME/PASSWORD/7340
 
 #EXTINF:-1 tvg-ID="LIFETIME.ph" tvg-logo="https://i.ibb.co/PjVBMqk/mylifetime.png" group-title="Israel: Style Living",SD לייפטיים
