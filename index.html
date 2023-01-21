@@ -96,6 +96,30 @@
           overflow: hidden;
           text-align: right;
         }
+
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
+        }
+
         
      </STYLE>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
@@ -119,7 +143,58 @@
     <h2 class="hebh2">הוראות שימוש באשף</h2>
     
     
-    <p class="hebp">שלך IPTV-בחר את נגן ה</p>
+    <p class="hebp">שלב א׳: בחרו את ספק השירות שלך</p>
+    <button type="button" class="collapsible">DATOO/LiveGo</button>
+    <div class="content">
+      <p class="hebp">
+        <ul dir="rtl">
+          <li>חפשו את הדוא״ל שקיבלתם מספק השירות שלכם.</li>
+          <li>בתוך פרטי הדוא״ל, מצאו את שם המשתמש והסיסמה שקיבלתם עבור השירות.</li>
+          <li>כתובת שירות ה-DikoPlus שלכם הינו: <code>https://dikoplus.cyclic.app/livego?u=USERNAME&p=PASSWORD</code>.</li>
+          <ol>
+            <li>החליפו את הפרמטרים USERNAME ו-PASSWORD עם הפרטים שלכם התוך הדוא״ל של ספק השירות.</li>
+            <li>זכרו את הכתובת הזו, אתם תצטרכו אותה בשלב ב׳ של המדריך.</li>
+          </ol>
+        </ul>
+      </p>
+    </div>
+    <button type="button" class="collapsible">Crystal</button>
+    <div class="content">
+      <p class="hebp">
+        <ul dir="rtl">
+          <li>חפשו את הדוא״ל שקיבלתם מספק השירות שלכם.</li>
+          <li>בתוך פרטי הדוא״ל, מצאו את שם המשתמש והסיסמה שקיבלתם עבור השירות.</li>
+          <li>כתובת שירות ה-DikoPlus שלכם הינו: <code>https://dikoplus.cyclic.app/crystal?u=USERNAME&p=PASSWORD</code>.</li>
+          <ol>
+            <li>החליפו את הפרמטרים USERNAME ו-PASSWORD עם הפרטים שלכם התוך הדוא״ל של ספק השירות.</li>
+            <li>זכרו את הכתובת הזו, אתם תצטרכו אותה בשלב ב׳ של המדריך.</li>
+          </ol>
+        </ul>
+      </p>
+    </div>
+    <button type="button" class="collapsible">Antifriz</button>
+    <div class="content">
+      <p class="hebp">
+        <ul dir="rtl">
+          <li>היכנסו לאתר Antifriz לתוך הגדרות החשבון שלכם. תוודאו שבפינה הימנית העליונה לחצתם על דגל ארה״ב כדי שהמידע יופיע באנגלית.</li>
+          <li>לחצו על Playlist and Settings.</li>
+            <img src="img/antifriz-home-1" alt="Add playlist" class="inline"/><br>
+          <li>בדף ההגדרות, לקראת אמצע המסך, בחר את האופציה Download בסעיף Playlist.m3u.</li>
+            <img src="img/antifriz-home-2" alt="Add playlist" class="inline"/><br>
+          <li>לאחר שהורדתם את הקובץ למחשב שלכם, פתחו אותו באמצעות תוכנת עיבוד טקסט כלשהי.</li>
+          <li>בתוך הקובץ תמצאו כמות גדולה של שורות שנראות מאד דומה לנוסח הבא: <code>http://bethoven.af-stream.com:1600/s/TOKEN/CHANNEL-NAME/video.m3u8</code>. שימו לב שהפרמטר CHANNEL-NAME יהיה שונה עבור כל ערוץ. הפרמטר TOKEN יהיה זהה בכל השורות וזהו הפרמטר שאתם צריכים עבור השלב הבא!</li>
+          <li></li>
+          <li>כתובת שירות ה-DikoPlus שלכם הינו: <code>https://dikoplus.cyclic.app/antifriz?p=TOKEN</code>.</li>
+          <ol>
+            <li>החליפו את הפרמטר TOKEN עם ה-TOKEN שהוצאתם מתוך הקובץ M3U שהורדתם מהאתר.</li>
+            <li>זכרו את הכתובת הזו, אתם תצטרכו אותה בשלב ב׳ של המדריך.</li>
+          </ol>
+        </ul>
+      </p>
+    </div>
+
+
+    <p class="hebp">שלך IPTV-שלב ב׳: בחרו את נגן ה</p>
     <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'Tivimate')">Tivimate</button>
       <button class="tablinks" onclick="openCity(event, 'Televizo')">Televizo</button>
@@ -333,6 +408,24 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 
 </body>
