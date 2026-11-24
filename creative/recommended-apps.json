@@ -12,6 +12,12 @@
     "iconUrl": "https://raw.githubusercontent.com/yuliskov/SmartTube/master/smarttubetv/src/ststable/res/mipmap-nodpi-v30/app_icon.png"
   },
   {
+    "category": "Screensavers",
+    "name": "Aerial Views",
+    "downloadUrl": "https://github.com/theothernt/AerialViews/releases/download/1.8.6/aerial-views-1.8.6.apk",
+    "iconUrl": "https://cdn.aptoide.com/imgs/8/4/a/84a7c2740a4e04cab9d63eb519d7cab8_icon.png"
+  },
+  {
     "category": "Israel",
     "name": "MediaBox",
     "downloadUrl": "https://tiny.cc/mboxil",
