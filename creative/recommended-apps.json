@@ -1,6 +1,12 @@
 [
   {
     "category": "Entertainment",
+    "name": "Nuvio",
+    "downloadUrl": "https://github.com/NuvioMedia/NuvioTV/releases/latest/download/app-full-universal-release.apk",
+    "iconUrl": "https://avatars.githubusercontent.com/u/267417830?v=4"
+  },
+  {
+    "category": "Entertainment",
     "name": "SmartTube",
     "downloadUrl": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
     "iconUrl": "https://raw.githubusercontent.com/yuliskov/SmartTube/master/smarttubetv/src/ststable/res/mipmap-nodpi-v30/app_icon.png"
