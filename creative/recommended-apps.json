@@ -1,0 +1,20 @@
+[
+  {
+    "category": "Entertainment",
+    "name": "SmartTube",
+    "downloadUrl": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
+    "iconUrl": "https://raw.githubusercontent.com/yuliskov/SmartTube/master/smarttubetv/src/ststable/res/mipmap-nodpi-v30/app_icon.png"
+  },
+  {
+    "category": "Israel",
+    "name": "MediaBox",
+    "downloadUrl": "http://tiny.cc/mboxil",
+    "iconUrl": "https://ugc.production.linktr.ee/c9ee9475-e6ab-4f69-bfe2-dfa0ca6522ae_logo.png"
+  },
+  {
+    "category": "Israel",
+    "name": "MyKo",
+    "downloadUrl": "https://www.dropbox.com/scl/fi/hgov25umi7cjvpfyu9n8h/Myko.apk?rlkey=a5eg0p87jo7tm6poqxym9bklk&dl=1",
+    "iconUrl": "https://raw.githubusercontent.com/dtp80/FluxMusic/main/scripts/src/light/MyKo.png"
+  }
+]
