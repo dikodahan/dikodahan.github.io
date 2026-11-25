@@ -54,7 +54,7 @@
         "en": "Add keyboard language",
         "he": "הוסף שפה למקלדת"
       },
-      "command": "am start -a android.settings.INPUT_METHOD_SETTINGS"
+      "command": "am start -a android.settings.SLICE_SETTINGS -p com.android.tv.settings --es slice_uri content://com.google.android.inputmethod.latin.tv.sliceprovider/language_settings"
     }
   ]
 }
