@@ -41,6 +41,13 @@
       "command2": "settings --user current put secure screensaver_components com.neilturner.aerialviews/.ui.screensaver.DreamActivity",
       "command3": "settings --user current put secure screensaver_activate_on_sleep 1 && settings --user current put secure screensaver_enabled 1",
       "command4": "settings --user current put system screen_off_timeout 300000 && echo 'Aerial Views selected. Screensaver delay: 5 minutes.'"
+    },
+    {
+      "name": {
+        "en": "Never turn off when inactive",
+        "he": "ביטול כיבוי אוטומטי בחוסר פעילות"
+      },
+      "command": "settings --user current put secure sleep_timeout -1 && test \"$(settings --user current get secure sleep_timeout)\" = -1 && echo 'Automatically turn off when inactive: Never'"
     }
   ]
 }
