@@ -29,6 +29,12 @@
       "name": "MyKo",
       "downloadUrl": "https://www.dropbox.com/scl/fi/hgov25umi7cjvpfyu9n8h/Myko.apk?rlkey=a5eg0p87jo7tm6poqxym9bklk&dl=1",
       "iconUrl": "https://raw.githubusercontent.com/dtp80/FluxMusic/main/scripts/src/light/MyKo.png"
+    },
+    {
+      "category": "Icon Packs",
+      "name": "Minimalist Pack",
+      "downloadUrl": "https://github.com/hqn-scl/android-tv-minimalist-icon-pack/releases/download/v1.0.0/Minimalist-Icons.1.0.0.apk",
+      "iconUrl": "https://raw.githubusercontent.com/hqn-scl/android-tv-minimalist-icon-pack/main/assets/ic_launcher.png"
     }
   ],
   "adbCommands": [
