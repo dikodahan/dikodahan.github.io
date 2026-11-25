@@ -34,8 +34,8 @@
   "adbCommands": [
     {
       "name": {
-        "en": "Set Screensaver",
-        "he": "הגדרת שומר מסך"
+        "en": "Set Aerial Views Screensaver",
+        "he": "הגדרת שומר המסך Aerial Views"
       },
       "command1": "pm path --user current com.neilturner.aerialviews | grep -q '^package:' || { echo 'Install Aerial Views first, then run Set Screensaver again.'; exit 1; }",
       "command2": "settings --user current put secure screensaver_components com.neilturner.aerialviews/.ui.screensaver.DreamActivity",
