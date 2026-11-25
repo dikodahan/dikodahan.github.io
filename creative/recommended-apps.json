@@ -1,32 +1,46 @@
-[
-  {
-    "category": "Entertainment",
-    "name": "Nuvio",
-    "downloadUrl": "https://github.com/NuvioMedia/NuvioTV/releases/latest/download/app-full-universal-release.apk",
-    "iconUrl": "https://avatars.githubusercontent.com/u/267417830?v=4"
-  },
-  {
-    "category": "Entertainment",
-    "name": "SmartTube",
-    "downloadUrl": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
-    "iconUrl": "https://raw.githubusercontent.com/yuliskov/SmartTube/master/smarttubetv/src/ststable/res/mipmap-nodpi-v30/app_icon.png"
-  },
-  {
-    "category": "Screensavers",
-    "name": "Aerial Views",
-    "downloadUrl": "https://github.com/theothernt/AerialViews/releases/download/1.8.6/aerial-views-1.8.6.apk",
-    "iconUrl": "https://cdn.aptoide.com/imgs/8/4/a/84a7c2740a4e04cab9d63eb519d7cab8_icon.png"
-  },
-  {
-    "category": "Israel",
-    "name": "MediaBox",
-    "downloadUrl": "https://tiny.cc/mboxil",
-    "iconUrl": "https://ugc.production.linktr.ee/c9ee9475-e6ab-4f69-bfe2-dfa0ca6522ae_logo.png"
-  },
-  {
-    "category": "Israel",
-    "name": "MyKo",
-    "downloadUrl": "https://www.dropbox.com/scl/fi/hgov25umi7cjvpfyu9n8h/Myko.apk?rlkey=a5eg0p87jo7tm6poqxym9bklk&dl=1",
-    "iconUrl": "https://raw.githubusercontent.com/dtp80/FluxMusic/main/scripts/src/light/MyKo.png"
-  }
-]
+{
+  "apps": [
+    {
+      "category": "Entertainment",
+      "name": "Nuvio",
+      "downloadUrl": "https://github.com/NuvioMedia/NuvioTV/releases/latest/download/app-full-universal-release.apk",
+      "iconUrl": "https://avatars.githubusercontent.com/u/267417830?v=4"
+    },
+    {
+      "category": "Entertainment",
+      "name": "SmartTube",
+      "downloadUrl": "https://github.com/yuliskov/SmartTube/releases/download/latest/smarttube_stable.apk",
+      "iconUrl": "https://raw.githubusercontent.com/yuliskov/SmartTube/master/smarttubetv/src/ststable/res/mipmap-nodpi-v30/app_icon.png"
+    },
+    {
+      "category": "Screensavers",
+      "name": "Aerial Views",
+      "downloadUrl": "https://github.com/theothernt/AerialViews/releases/download/1.8.6/aerial-views-1.8.6.apk",
+      "iconUrl": "https://cdn.aptoide.com/imgs/8/4/a/84a7c2740a4e04cab9d63eb519d7cab8_icon.png"
+    },
+    {
+      "category": "Israel",
+      "name": "MediaBox",
+      "downloadUrl": "https://tiny.cc/mboxil",
+      "iconUrl": "https://ugc.production.linktr.ee/c9ee9475-e6ab-4f69-bfe2-dfa0ca6522ae_logo.png"
+    },
+    {
+      "category": "Israel",
+      "name": "MyKo",
+      "downloadUrl": "https://www.dropbox.com/scl/fi/hgov25umi7cjvpfyu9n8h/Myko.apk?rlkey=a5eg0p87jo7tm6poqxym9bklk&dl=1",
+      "iconUrl": "https://raw.githubusercontent.com/dtp80/FluxMusic/main/scripts/src/light/MyKo.png"
+    }
+  ],
+  "adbCommands": [
+    {
+      "name": {
+        "en": "Set Screensaver",
+        "he": "הגדרת שומר מסך"
+      },
+      "command1": "pm path --user current com.neilturner.aerialviews | grep -q '^package:' || { echo 'Install Aerial Views first, then run Set Screensaver again.'; exit 1; }",
+      "command2": "settings --user current put secure screensaver_components com.neilturner.aerialviews/.ui.screensaver.DreamActivity",
+      "command3": "settings --user current put secure screensaver_activate_on_sleep 1 && settings --user current put secure screensaver_enabled 1",
+      "command4": "settings --user current put system screen_off_timeout 300000 && echo 'Aerial Views selected. Screensaver delay: 5 minutes.'"
+    }
+  ]
+}
