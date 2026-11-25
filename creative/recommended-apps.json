@@ -48,6 +48,13 @@
         "he": "ביטול כיבוי אוטומטי בחוסר פעילות"
       },
       "command": "settings --user current put secure sleep_timeout -1 && test \"$(settings --user current get secure sleep_timeout)\" = -1 && echo 'Automatically turn off when inactive: Never'"
+    },
+    {
+      "name": {
+        "en": "Add keyboard language",
+        "he": "הוסף שפה למקלדת"
+      },
+      "command": "am start -a android.settings.INPUT_METHOD_SETTINGS"
     }
   ]
 }
